@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tool Crib IMIMS — Project Details</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Override CodeWithSadee default hidden states */
+      article,
+      main {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: var(--smoky-black);
+      color: var(--white-2);
+      font-family: 'Poppins', sans-serif;
+    "
+  >
+    <main style="max-width: 950px; margin: 60px auto; padding: 30px">
+      <article class="content-card">
+        <h2 class="h2 article-title">
+          Data-Driven Optimization of Concrete Strength Prediction
+        </h2>
+
+        <figure style="margin: 25px 0">
+          <img
+            src="./assets/images/project-2.png"
+            alt="IMIMS Project"
+            style="width: 100%; border-radius: 12px"
+          />
+        </figure>
+
+        <section class="about-text">
+          <p>
+            Conducted an end-to-end
+            <strong>predictive analytics study</strong> on a dataset of
+            <strong>1,030 concrete mix observations</strong> to analyze how
+            material composition impacts <strong>compressive strength</strong>.
+            Performed extensive
+            <strong>exploratory data analysis (EDA)</strong> using statistical
+            summaries, histograms, scatter plots, and correlation heatmaps to
+            uncover relationships among key variables such as cement, water,
+            slag, superplasticizer, and age.
+          </p>
+          <p>
+            Built and compared multiple regression models —
+            <strong>Linear, Ridge, and Lasso Regression</strong> — to predict
+            concrete strength. Achieved an <strong>R² of 61.6%</strong>,
+            identifying cement, water, superplasticizer, and age as the most
+            significant predictors while mitigating multicollinearity through
+            regularization techniques.
+          </p>
+          <p>
+            Designed and validated classification models including
+            <strong>Logistic Regression</strong>, <strong>LDA</strong>, and
+            <strong>KNN</strong> for binary strength prediction (&gt;40 MPa),
+            attaining a peak accuracy of <strong>85.44%</strong> to support
+            reliable decision-making on strength thresholds.
+          </p>
+          <p>
+            Applied <strong>cross-validation</strong> techniques (K-Fold and
+            Validation Set Approach) and
+            <strong>forward subset selection</strong> to refine feature
+            selection and minimize model bias and variance.
+          </p>
+          <p>
+            Proposed an <strong>optimization framework</strong> integrating
+            insights from <strong>Regression Tree analysis</strong> and
+            <strong>Lean Six Sigma (DMAIC)</strong> methodology to recommend
+            optimal material proportions, enhance process control, and improve
+            cost efficiency in concrete production.
+          </p>
+          <p>
+            Summarized findings through
+            <strong>interpretive visualizations</strong> and detailed
+            statistical reports, providing actionable insights for both
+            manufacturing optimization and predictive quality management in
+            construction materials.
+          </p>
+        </section>
+
+        <div
+          style="
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+          "
+        >
+          <!-- View Project Report Button -->
+          <a
+            href="./assets/files/Data-DrivenConcreteStrenghtPredictionreport.pdf"
+            target="_blank"
+            class="resume-download-btn"
+          >
+            📄 View Full Project Report
+          </a>
+          <a href="./index.html#projects" class="resume-download-btn"
+            >← Back to Projects</a
+          >
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

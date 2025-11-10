@@ -2134,3 +2134,23 @@ textarea.form-input::-webkit-resizer {
   color: var(--orange-yellow-crayola);
   /* border-bottom: 1px solid var(--orange-yellow-crayola); */
 }
+
+.about-text ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.75rem !important;
+  margin: 1rem 0 !important;
+}
+
+.about-text li {
+  display: list-item !important; /* <-- this line restores the bullet */
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-bottom: 0.6rem;
+  color: var(--white-2);
+}
+
+.about-text li::marker {
+  color: #ffea00 !important; /* yellow bullet color */
+  font-size: large;
+}
