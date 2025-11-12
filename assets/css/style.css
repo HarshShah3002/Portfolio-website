@@ -60,7 +60,7 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 59%);
-  --vegas-gold: hsl(45, 54%, 58%);
+  --vegas-gold: hsl(45, 100%, 59%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
@@ -2153,4 +2153,25 @@ textarea.form-input::-webkit-resizer {
 .about-text li::marker {
   color: #ffea00 !important; /* yellow bullet color */
   font-size: large;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--white-2);
+  background: var(--onyx);
+  padding: 8px;
+  border-radius: 80%;
+  border: 2px solid;
+  border-color: hsl(45, 100%, 59%);
+  margin: 10px 5px;
+  /* transition: background 0.3s ease; */
+}
+
+.back-btn:hover {
+  background: hsl(45, 100%, 59%);
+  color: var(--smoky-black);
 }
