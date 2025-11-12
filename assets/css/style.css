@@ -302,7 +302,7 @@ article.active {
   padding-top: 15px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: pointer;
+  cursor: default;
   z-index: 1;
 }
 
@@ -2050,9 +2050,9 @@ textarea.form-input::-webkit-resizer {
   .sidebar {
     position: fixed;
     margin: 50px;
-    top: 0;
+    top: 12px;
     left: 0;
-    height: 90vh; /* full viewport height */
+    height: 100vh; /* full viewport height */
     overflow-y: auto; /* scrollable if content exceeds height */
     padding-top: 40px; /* slight padding for breathing space */
     background: var(--eerie-black-2);
@@ -2174,4 +2174,90 @@ textarea.form-input::-webkit-resizer {
 .back-btn:hover {
   background: hsl(45, 100%, 59%);
   color: var(--smoky-black);
+}
+/* What i a doing design addition */
+/* Base card styling */
+/* Base card styling */
+.service-item {
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
+  background: #1c1c1c;
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Hover lift */
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+/* sidebar addition 
+.sidebar {
+  border-radius: 20px;
+  
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(249, 198, 2, 0.4);
+  box-shadow: 0 0 20px rgba(249, 198, 2, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.sidebar:hover {
+  box-shadow: 0 0 30px rgba(249, 198, 2, 0.6);
+}
+*/
+/*sidebar icons hover glow addition*/
+.icon-box ion-icon {
+  color: #f9c602;
+  transition: transform 0.3s ease;
+}
+.icon-box ion-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #f9c602);
+}
+/* Sidebar with subtle animated border */
+.sidebar {
+  /* position: relative; */
+  border-radius: 20px;
+  padding: 20px;
+  background: rgba(20, 20, 20, 0.9);
+  overflow: hidden;
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+/* Animated subtle moving border for sidebar */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgb(255, 213, 44),
+    transparent
+  );
+  background-size: 200% 200%;
+  animation: softMoveSidebar 5s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* Diagonal motion animation (same as service blocks, slower) */
+@keyframes softMoveSidebar {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
