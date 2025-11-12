@@ -2237,7 +2237,7 @@ textarea.form-input::-webkit-resizer {
   background: linear-gradient(
     135deg,
     transparent,
-    rgb(255, 213, 44),
+    rgba(235, 193, 5, 0.904),
     transparent
   );
   background-size: 200% 200%;
