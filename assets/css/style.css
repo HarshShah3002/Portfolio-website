@@ -524,7 +524,7 @@ main {
 
 .about-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-4);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
@@ -1101,7 +1101,7 @@ main {
 }
 
 .project-title {
-  color: var(--white-2);
+  color: hsl(45, 100%, 63%);
   font-size: var(--fs-5);
   font-weight: var(--fw-400);
   text-transform: capitalize;
@@ -2181,6 +2181,7 @@ textarea.form-input::-webkit-resizer {
 .service-item {
   position: relative;
   border-radius: 20px;
+  border: 0.7px solid rgba(245, 198, 12, 0.457);
   padding: 20px;
   background: #1c1c1c;
   overflow: hidden;
@@ -2237,11 +2238,11 @@ textarea.form-input::-webkit-resizer {
   background: linear-gradient(
     135deg,
     transparent,
-    rgba(235, 193, 5, 0.904),
+    rgba(255, 213, 44, 0.64),
     transparent
   );
   background-size: 200% 200%;
-  animation: softMoveSidebar 5s linear infinite;
+  animation: softMoveSidebar 3s linear infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
@@ -2260,4 +2261,11 @@ textarea.form-input::-webkit-resizer {
   100% {
     background-position: 0% 0%;
   }
+}
+
+.h2-article-title {
+  /* display: inline-block; */
+  margin: 10px;
+  margin-left: 35px;
+  font-size: 2.7rem;
 }
