@@ -2299,3 +2299,92 @@ textarea.form-input::-webkit-resizer {
     border-radius: 16px;
   }
 }
+
+/* skills icon on mobile */
+@media (max-width: 480px) {
+  .testimonials-avatar-box {
+    transform: translate(10px, -15px) !important;
+    padding: 6px !important;
+    border-radius: 12px !important;
+  }
+
+  .testimonials-avatar-box img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .testimonials-item-title {
+    margin-left: 60px !important; /* make room for the smaller icon */
+  }
+}
+
+/*Project section on mobile*/
+@media (max-width: 480px) {
+  .h2-article-title,
+  h1,
+  .project-title-heading {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+
+  .project-image,
+  .project-banner,
+  .project-img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-header,
+  .project-intro-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image,
+  .project-banner {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .project-content {
+    padding: 15px !important;
+  }
+}
+
+/* hide dropdwon of category in project section on mobile */
+/* Hide category dropdown permanently */
+.filter-select-box {
+  display: none !important;
+}
+
+/* border on sidebar for mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    border: 1px solid rgba(255, 213, 44, 0.6) !important;
+  }
+
+  .sidebar::before {
+    padding: 1px !important;
+    opacity: 1 !important;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 213, 44, 0.7),
+      rgba(255, 213, 44, 0.3)
+    ) !important;
+  }
+}
