@@ -334,7 +334,8 @@ main {
   max-height: 112px;
   overflow: hidden;
   transition: var(--transition-2);
-  width: 100px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .sidebar.active {
@@ -2268,4 +2269,33 @@ textarea.form-input::-webkit-resizer {
   margin: 10px;
   margin-left: 35px;
   font-size: 2.7rem;
+}
+
+/*sidebar*/
+@media (max-width: 480px) {
+  .sidebar::before {
+    display: none !important; /* ✅ Fix broken borders on mobile */
+  }
+}
+
+/* Navbar */
+@media (max-width: 520px) {
+  main {
+    padding-bottom: 120px !important; /* ✅ Lift content above navbar */
+  }
+}
+
+@media (max-width: 480px) {
+  article {
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-box img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
 }
