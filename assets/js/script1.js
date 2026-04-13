@@ -100,3 +100,62 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+// skills modal
+(function () {
+  const skillsData = {
+    technical: {
+      title: "Technical Skills",
+      tags: ["Python", "SQL", "JavaScript", "Java", "HTML / CSS", "Machine Learning", "A/B Testing", "Data Analysis & Visualization"],
+      cert: false
+    },
+    tools: {
+      title: "Tools & Platforms",
+      tags: ["Tableau", "Power BI", "Streamlit", "Git", "Jira", "Jupyter Notebook", "Google Analytics", "AWS", "MySQL", "Google Colab", "Notion", "Slack"],
+      cert: false
+    },
+    certifications: {
+      title: "Certifications",
+      tags: [
+        "Professional Scrum Master (PSM 1) - Scrum.org",
+        "Engineering Project Management - TAMU",
+        "IIT Bombay Incubation & Entrepreneurship - Top 1%"
+      ],
+      cert: true
+    }
+  };
+
+  const overlay = document.querySelector("[data-skills-overlay]");
+  const modalTitle = document.querySelector("[data-skills-modal-title]");
+  const modalBody = document.querySelector("[data-skills-modal-body]");
+  const closeBtn = document.querySelector("[data-skills-modal-close]");
+
+  function openModal(type) {
+    const data = skillsData[type];
+    modalTitle.textContent = data.title;
+    modalBody.innerHTML = data.tags
+      .map(tag => `<span class="skill-tag${data.cert ? " skill-tag--cert" : ""}">${tag}</span>`)
+      .join("");
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll("[data-skills-card]").forEach(function (card) {
+    card.addEventListener("click", function () {
+      openModal(card.dataset.skillsCard);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeModal();
+  });
+}());

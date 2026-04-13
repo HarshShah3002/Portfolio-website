@@ -313,44 +313,42 @@ College Station, Texas, USA
           <section class="skills">
             <h3 class="h3 skills-title">Skills</h3>
 
-            <div class="skills-group">
-              <h4 class="skills-group-label">Technical Skills</h4>
-              <div class="skills-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">HTML / CSS</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">A/B Testing</span>
-                <span class="skill-tag">Data Analysis &amp; Visualization</span>
-              </div>
+            <div class="skills-cards">
+              <button class="skills-card" data-skills-card="technical" aria-label="Technical Skills">
+                <div class="skills-card-icon">
+                  <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+                <h4 class="skills-card-title">Technical Skills</h4>
+                <p class="skills-card-meta">8 skills</p>
+              </button>
+
+              <button class="skills-card" data-skills-card="tools" aria-label="Tools and Platforms">
+                <div class="skills-card-icon">
+                  <ion-icon name="construct-outline"></ion-icon>
+                </div>
+                <h4 class="skills-card-title">Tools &amp; Platforms</h4>
+                <p class="skills-card-meta">12 tools</p>
+              </button>
+
+              <button class="skills-card" data-skills-card="certifications" aria-label="Certifications">
+                <div class="skills-card-icon">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <h4 class="skills-card-title">Certifications</h4>
+                <p class="skills-card-meta">3 certs</p>
+              </button>
             </div>
 
-            <div class="skills-group">
-              <h4 class="skills-group-label">Tools &amp; Platforms</h4>
-              <div class="skills-tags">
-                <span class="skill-tag">Tableau</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">Streamlit</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Jira</span>
-                <span class="skill-tag">Jupyter Notebook</span>
-                <span class="skill-tag">Google Analytics</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">Google Colab</span>
-                <span class="skill-tag">Notion</span>
-                <span class="skill-tag">Slack</span>
-              </div>
-            </div>
-
-            <div class="skills-group">
-              <h4 class="skills-group-label">Certifications</h4>
-              <div class="skills-tags">
-                <span class="skill-tag skill-tag--cert">Professional Scrum Master (PSM 1) — Scrum.org</span>
-                <span class="skill-tag skill-tag--cert">Engineering Project Management — TAMU</span>
-                <span class="skill-tag skill-tag--cert">IIT Bombay Incubation &amp; Entrepreneurship — Top 1%</span>
+            <!-- Skills popup modal -->
+            <div class="skills-modal-overlay" data-skills-overlay>
+              <div class="skills-modal" data-skills-modal>
+                <div class="skills-modal-header">
+                  <h4 class="skills-modal-title" data-skills-modal-title></h4>
+                  <button class="skills-modal-close" data-skills-modal-close aria-label="Close">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </button>
+                </div>
+                <div class="skills-modal-tags" data-skills-modal-body></div>
               </div>
             </div>
           </section>
@@ -534,8 +532,8 @@ College Station, Texas, USA
   <ol class="timeline-list">
 
     <li class="timeline-item">
-      <h4 class="h4 timeline-item-title">Product Management Intern — Staytuned LLP</h4>
-      <span class="p-highlight">January 2024 — June 2024</span>
+      <h4 class="h4 timeline-item-title">Product Management Intern  - Staytuned LLP</h4>
+      <span class="p-highlight">January 2024  - June 2024</span>
 
       <p class="timeline-text">
         • Led a cross-functional team to develop an automated GitHub workflow using JavaScript and GitHub API, automating branch creation and pull request generation, reducing manual effort by 80% and accelerating development cycles.<br><br>
@@ -546,8 +544,8 @@ College Station, Texas, USA
     </li>
 
     <li class="timeline-item">
-      <h4 class="h4 timeline-item-title">Software Engineering Intern — Tysu Infotech Pvt. Ltd.</h4>
-      <span>May 2023 — July 2023</span>
+      <h4 class="h4 timeline-item-title">Software Engineering Intern  - Tysu Infotech Pvt. Ltd.</h4>
+      <span>May 2023  - July 2023</span>
 
       <p class="timeline-text">
         • Collaborated with the product team to analyze user behavior and feedback on the <strong>Homveersity</strong> student housing platform and led a strategic UI/UX homepage redesign aligning with user needs and business KPIs.<br><br>
@@ -558,8 +556,8 @@ College Station, Texas, USA
     </li>
 
     <li class="timeline-item">
-      <h4 class="h4 timeline-item-title">Data Analyst Intern — Innodel Technologies Pvt. Ltd.</h4>
-      <span>May 2022 — July 2022</span>
+      <h4 class="h4 timeline-item-title">Data Analyst Intern  - Innodel Technologies Pvt. Ltd.</h4>
+      <span>May 2022  - July 2022</span>
 
       <p class="timeline-text">
         • Designed and developed interactive <strong>Tableau dashboards</strong> visualizing cardiovascular illness trends across multiple demographic datasets, supporting healthcare decision-making and policy focus.<br><br>
