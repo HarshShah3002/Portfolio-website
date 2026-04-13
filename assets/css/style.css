@@ -904,6 +904,47 @@ main {
   margin-bottom: 20px;
 }
 
+.skills-group {
+  margin-bottom: 20px;
+}
+
+.skills-group-label {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: var(--bg-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  color: var(--light-gray);
+  transition: var(--transition-1);
+}
+
+.skill-tag:hover {
+  border-color: var(--orange-yellow-crayola);
+  color: var(--orange-yellow-crayola);
+}
+
+.skill-tag--cert {
+  border-color: hsla(45, 100%, 59%, 0.35);
+  color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-yellow-2);
+}
+
 .skills-list {
   padding: 20px;
 }
