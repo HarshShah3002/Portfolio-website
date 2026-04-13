@@ -3,15 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tool Crib IMIMS  - Project Details</title>
+    <title>Yoga Pose Detection - Project Details</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      /* Override CodeWithSadee default hidden states */
       article,
       main {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+      }
+
+      .project-tag {
+        display: inline-block;
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 6px;
+        padding: 4px 11px;
+        font-size: 12px;
+        color: var(--light-gray);
+        margin: 3px 3px 3px 0;
+      }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--light-gray-70);
+        margin-bottom: 10px;
+        margin-top: 28px;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin: 14px 0 8px 0;
+      }
+
+      .feature-card {
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .feature-card-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--orange-yellow-crayola);
+        margin-bottom: 6px;
+      }
+
+      .feature-card-body {
+        font-size: 13px;
+        color: var(--light-gray);
+        line-height: 1.6;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--light-gray);
+        border: 1px solid var(--jet);
+        border-radius: 8px;
+        padding: 6px 14px;
+        transition: 0.25s ease;
+        margin-bottom: 4px;
+      }
+
+      .back-btn:hover {
+        border-color: var(--orange-yellow-crayola);
+        color: var(--orange-yellow-crayola);
+      }
+
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 40px;
       }
     </style>
   </head>
@@ -24,99 +103,140 @@
   >
     <main style="max-width: 950px; margin: 60px auto; padding: 30px">
       <article class="content-card">
-        <a href="./index.html#projects" class="back-btn"> ← </a>
+        <a href="./index.html#projects" class="back-btn">← Back to Projects</a>
 
         <figure
           style="
-            margin: 25px 0;
-            align-items: center;
+            margin: 28px 0 20px 0;
             display: flex;
+            align-items: center;
             justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
           "
         >
           <img
             src="./assets/images/project-3.png"
-            alt="IMIMS Project"
-            style="width: 40%; border-radius: 12px"
+            alt="Yoga Pose Detection Project"
+            style="width: 38%; border-radius: 12px; min-width: 200px"
           />
-          <h2 class="h2-article-title">
-            Explorations In Yoga Pose Detection Using Computer Vision Models
-          </h2>
+          <div>
+            <h2 class="h2 article-title" style="margin-bottom: 12px">
+              Explorations in Yoga Pose Detection using Computer Vision Models
+            </h2>
+            <div>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">MediaPipe</span>
+              <span class="project-tag">MoveNet</span>
+              <span class="project-tag">Computer Vision</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Keypoint Detection</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML / CSS</span>
+              <span class="project-tag">Data Augmentation</span>
+            </div>
+          </div>
         </figure>
 
-        <h2 class="h2 article-title"></h2>
-
         <section class="about-text">
+
+          <p class="section-label">Overview</p>
+          <p style="color: var(--light-gray); line-height: 1.8; font-size: 14px;">
+            Led the development of a <span class="p-highlight">real-time Yoga Pose Detection
+            system</span> comparing two state-of-the-art computer vision models —
+            <span class="p-highlight">MediaPipe</span> and <span class="p-highlight">MoveNet</span> —
+            across a labeled dataset of 6,000 images spanning five yoga asanas. Through iterative
+            fine-tuning, data augmentation, and multi-joint keypoint tracking, the system achieved
+            pose detection accuracy between <span class="p-highlight">95.4% and 98.7%</span>
+            with MediaPipe, reducing the false detection rate by
+            <span class="p-highlight">22%</span> over baseline performance.
+          </p>
+
+          <p class="section-label">What Was Built</p>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-card-title">Model Selection & Comparison</div>
+              <div class="feature-card-body">
+                Evaluated <span class="p-highlight">MediaPipe Pose</span> and
+                <span class="p-highlight">MoveNet (Lightning & Thunder)</span> on identical
+                data splits to benchmark accuracy, inference speed, and robustness under
+                different conditions. MediaPipe's multi-joint keypoint tracking outperformed
+                MoveNet across all five asana classes in final evaluation.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Dataset & Training</div>
+              <div class="feature-card-body">
+                Trained and validated models on a <span class="p-highlight">6,000-image
+                labeled dataset</span> covering five yoga asanas: Plank, Warrior, Tree,
+                Downdog, and Goddess. Applied extensive
+                <span class="p-highlight">data augmentation</span> — random flips,
+                brightness shifts, and rotation — to simulate varied lighting and angle
+                scenarios and improve generalization.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Model Optimization</div>
+              <div class="feature-card-body">
+                Reduced the false detection rate by <span class="p-highlight">22%</span>
+                through iterative fine-tuning of keypoint confidence thresholds, pose
+                classification boundaries, and augmentation strategies. Applied the complete
+                <span class="p-highlight">ML lifecycle</span> — preprocessing, training,
+                cross-validation, and evaluation — to optimize for real-time performance.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Real-Time Web Platform</div>
+              <div class="feature-card-body">
+                Developed a <span class="p-highlight">web-based interface</span> using
+                HTML, CSS, and JavaScript that processes live webcam frames in-browser
+                and runs model inference in real time. Users perform poses in front of
+                their camera and receive instant feedback on joint alignment and
+                posture quality.
+              </div>
+            </div>
+          </div>
+
+          <p class="section-label">Key Results</p>
           <ul>
             <li>
-              Designed and evaluated a real-time
-              <span class="p-highlight">Yoga Pose Detection System</span>
-              integrating <span class="p-highlight">MediaPipe</span> and
-              <span class="p-highlight">MoveNet</span> models to analyze human
-              postures and provide instant feedback for pose correction.
+              Achieved pose detection accuracy ranging from
+              <span class="p-highlight">95.4% to 98.7%</span> with MediaPipe across
+              all five asana classes, with the highest accuracy on structurally
+              distinct poses like Tree and Warrior.
             </li>
             <li>
-              Conducted <span class="p-highlight">data-driven</span> model
-              comparisons using a dataset of
-              <span class="p-highlight">6,000 labeled images</span> across five
-              yoga asanas: Plank, Warrior, Tree, Downdog, and Goddess, achieving
-              accuracies between <span class="p-highlight">95.4%</span> and
-              <span class="p-highlight">98.7%</span> with MediaPipe.
+              Reduced false detection rate by <span class="p-highlight">22%</span>
+              over the initial baseline through targeted data augmentation and
+              confidence threshold tuning across varied lighting and camera angle scenarios.
             </li>
-
             <li>
-              Applied the complete
-              <span class="p-highlight">machine learning lifecycle</span>,
-              including data preprocessing, model selection, training,
-              validation, and evaluation, to optimize pose estimation accuracy.
+              <span class="p-highlight">Multi-joint keypoint tracking</span> with
+              MediaPipe enabled simultaneous real-time analysis of 33 body landmarks,
+              supporting fine-grained posture correction feedback rather than coarse
+              pose classification alone.
             </li>
-
             <li>
-              Conceptualized a
-              <span class="p-highlight">web-based platform</span> allowing users
-              to perform yoga poses via webcam and receive
-              <span class="p-highlight">real-time feedback</span> on alignment
-              and posture quality, enhancing accessibility and engagement.
-            </li>
-
-            <li>
-              Developed the
-              <span class="p-highlight">front-end interface</span> using
-              <span class="p-highlight">HTML, CSS, and JavaScript</span> for
-              live video frame processing and model inference.
-            </li>
-
-            <li>
-              Emphasized usability and impact by mapping
-              <span class="p-highlight"
-                >system accuracy, latency, and user satisfaction metrics</span
-              >
-              to assess feasibility for large-scale wellness applications.
+              Delivered a fully functional <span class="p-highlight">user-centric
+              web platform</span> with real-time inference, designed to scale into
+              wellness and fitness applications where accessible, camera-based pose
+              guidance can replace in-person instruction.
             </li>
           </ul>
+
         </section>
 
-        <div
-          style="
-            text-align: center;
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-          "
-        >
-          <!-- View Project Report Button -->
+        <div class="btn-row">
           <a
             href="./assets/files/YogaPoseReport.pdf"
             target="_blank"
             class="resume-download-btn"
           >
-            📄 View Full Project Report
+            &#x1F4C4; View Full Project Report
           </a>
-          <a href="./index.html#projects" class="resume-download-btn"
-            >← Back to Projects</a
-          >
+          <a href="./index.html#projects" class="resume-download-btn">
+            ← Back to Projects
+          </a>
         </div>
       </article>
     </main>

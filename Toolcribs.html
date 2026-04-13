@@ -3,16 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tool Crib IMIMS  - Project Details</title>
+    <title>Tool Crib IMIMS - Project Details</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      /* Override CodeWithSadee default hidden states */
       article,
       main {
         display: block !important;
-        color: aliceblue;
         opacity: 1 !important;
         visibility: visible !important;
+      }
+
+      .project-tag {
+        display: inline-block;
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 6px;
+        padding: 4px 11px;
+        font-size: 12px;
+        color: var(--light-gray);
+        margin: 3px 3px 3px 0;
+      }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--light-gray-70);
+        margin-bottom: 10px;
+        margin-top: 28px;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin: 14px 0 8px 0;
+      }
+
+      .feature-card {
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .feature-card-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--orange-yellow-crayola);
+        margin-bottom: 6px;
+      }
+
+      .feature-card-body {
+        font-size: 13px;
+        color: var(--light-gray);
+        line-height: 1.6;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--light-gray);
+        border: 1px solid var(--jet);
+        border-radius: 8px;
+        padding: 6px 14px;
+        transition: 0.25s ease;
+        margin-bottom: 4px;
+      }
+
+      .back-btn:hover {
+        border-color: var(--orange-yellow-crayola);
+        color: var(--orange-yellow-crayola);
+      }
+
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 40px;
       }
     </style>
   </head>
@@ -25,103 +103,134 @@
   >
     <main style="max-width: 950px; margin: 60px auto; padding: 30px">
       <article class="content-card">
-        <!-- 🔙 Back Arrow Button -->
-        <a href="./index.html#projects" class="back-btn"> ← </a>
+        <a href="./index.html#projects" class="back-btn">← Back to Projects</a>
 
         <figure
           style="
-            margin: 25px 0;
-            align-items: center;
+            margin: 28px 0 20px 0;
             display: flex;
+            align-items: center;
             justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
           "
         >
           <img
             src="./assets/images/project-1.png"
-            alt="IMIMS Project"
-            style="width: 40%; border-radius: 12px; display: inline-block"
+            alt="Tool Crib IMIMS Project"
+            style="width: 38%; border-radius: 12px; min-width: 200px"
           />
-          <h2 class="h2-article-title">
-            Tool Crib Indirect Materials Inventory Management System (IMIMS)
-          </h2>
+          <div>
+            <h2 class="h2 article-title" style="margin-bottom: 12px">
+              Tool Crib Indirect Materials Inventory Management System (IMIMS)
+            </h2>
+            <div>
+              <span class="project-tag">Systems Engineering</span>
+              <span class="project-tag">Product Management</span>
+              <span class="project-tag">IoT Tracking</span>
+              <span class="project-tag">Microsoft D365</span>
+              <span class="project-tag">L2L Platform</span>
+              <span class="project-tag">Balanced Scorecard</span>
+              <span class="project-tag">VSM</span>
+              <span class="project-tag">MCS / LOC</span>
+              <span class="project-tag">Capstone</span>
+            </div>
+          </div>
         </figure>
 
-        <h2 class="h2 article-title"></h2>
-
         <section class="about-text">
+
+          <p class="section-label">Overview</p>
+          <p style="color: var(--light-gray); line-height: 1.8; font-size: 14px;">
+            Led a two-semester capstone project for <span class="p-highlight">Rochester Sensors</span>
+            to design and deliver a comprehensive <span class="p-highlight">Indirect Materials Inventory
+            Management System (IMIMS)</span> — addressing procurement inefficiencies, real-time
+            inventory visibility gaps, and vendor management challenges across the organization's
+            warehouse operations. The project spanned the full <span class="p-highlight">systems
+            engineering lifecycle</span>, from requirements and architecture through strategic
+            frameworks and projected impact modeling.
+          </p>
+
+          <p class="section-label">What Was Built</p>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-card-title">Product Vision & Roadmap</div>
+              <div class="feature-card-body">
+                Defined the product vision and roadmap by integrating
+                <span class="p-highlight">IoT-based tracking</span>, Microsoft D365, and the
+                L2L platform to enable real-time inventory visibility and automated procurement
+                workflows. Aligned cross-functional teams around a unified implementation strategy
+                with clearly defined milestones and ownership.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">System Architecture & Planning</div>
+              <div class="feature-card-body">
+                Designed the full system architecture, project charter, risk and quality management
+                plans, and compliance matrices. Applied a complete
+                <span class="p-highlight">systems engineering lifecycle</span> to ensure the
+                solution was scalable, secure, and cost-effective from the ground up.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Strategic Frameworks</div>
+              <div class="feature-card-body">
+                Developed a <span class="p-highlight">Balanced Scorecard (BSC)</span> and
+                <span class="p-highlight">Viable System Model (VSM)</span> to align strategic,
+                operational, and learning objectives. Engineered
+                <span class="p-highlight">Management Control Systems (MCS)</span> and
+                Levers of Control (LOC) models to improve accountability and cross-functional
+                decision-making.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Vendor Management</div>
+              <div class="feature-card-body">
+                Streamlined vendor management by consolidating supplier databases and building
+                <span class="p-highlight">performance scorecards</span> to evaluate sourcing
+                efficiency. Identified consolidation opportunities and proposed a scalable vendor
+                governance model to reduce dependency risks and improve procurement reliability.
+              </div>
+            </div>
+          </div>
+
+          <p class="section-label">Key Outcomes</p>
           <ul>
             <li>
-              Led a two-semester capstone project for
-              <span class="p-highlight">Rochester Sensors</span>, developing a
-              data-driven
-              <span class="p-highlight"
-                >Inventory and Vendor Management System (IMIMS)</span
-              >
-              to eliminate inefficiencies in procurement and warehouse
-              operations.
-            </li>
-
-            <li>
-              Applied a complete
-              <span class="p-highlight">systems engineering lifecycle</span> to
-              design an integrated framework leveraging IoT-based tracking,
-              Microsoft D365, and L2L platforms for real-time visibility,
-              automated workflows, and enhanced data security.
+              Projected <span class="p-highlight">50% reduction in procurement cycle time</span>
+              through automated workflows and real-time IoT inventory tracking, eliminating manual
+              hand-offs and reducing lead time uncertainty across the supply chain.
             </li>
             <li>
-              Designed the <span class="p-highlight">system architecture</span>,
-              <span class="p-highlight">project charter</span>,
-              <span class="p-highlight">risk and quality plans</span>, and
-              <span class="p-highlight">compliance matrices</span> to support a
-              scalable and cost-effective implementation strategy.
+              Targeted <span class="p-highlight">inventory error rate below 5%</span> by replacing
+              manual tracking with integrated D365 and L2L data pipelines, improving accuracy of
+              stock levels and replenishment triggers.
             </li>
             <li>
-              Developed
-              <span class="p-highlight">Balanced Scorecard (BSC)</span> and
-              <span class="p-highlight">Viable System Model (VSM)</span>
-              frameworks to align strategic, operational, and learning
-              objectives within the organization.
+              Projected <span class="p-highlight">20% reduction in operational costs</span> through
+              vendor consolidation, performance-based sourcing decisions, and elimination of
+              redundant procurement steps identified during process mapping.
             </li>
             <li>
-              Engineered
-              <span class="p-highlight">Management Control Systems (MCS)</span>
-              and
-              <span class="p-highlight">Levers of Control (LOC)</span> models to
-              enhance decision-making, accountability, and cross-functional
-              collaboration.
-            </li>
-            <li>
-              Proposed key performance metrics projecting up to a
-              <span class="p-highlight"
-                >50% reduction in procurement cycle time</span
-              >
-              and <span class="p-highlight">20% cost optimization</span> upon
-              implementation.
+              Delivered a complete systems engineering documentation package including architecture
+              diagrams, BSC dashboards, risk registers, and implementation roadmaps — ready for
+              handoff to the client engineering and operations teams.
             </li>
           </ul>
+
         </section>
 
-        <div
-          style="
-            text-align: center;
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-          "
-        >
-          <!-- View Project Report Button -->
+        <div class="btn-row">
           <a
             href="./assets/files/ToolCribsIMSReport.pdf"
             target="_blank"
             class="resume-download-btn"
           >
-            📄 View Full Project Report
+            &#x1F4C4; View Full Project Report
           </a>
-          <a href="./index.html#projects" class="resume-download-btn"
-            >← Back to Projects</a
-          >
+          <a href="./index.html#projects" class="resume-download-btn">
+            ← Back to Projects
+          </a>
         </div>
       </article>
     </main>
