@@ -3,15 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tool Crib IMIMS  - Project Details</title>
+    <title>Predictive Modeling for Concrete Strength - Project Details</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-      /* Override CodeWithSadee default hidden states */
       article,
       main {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+      }
+
+      .project-tag {
+        display: inline-block;
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 6px;
+        padding: 4px 11px;
+        font-size: 12px;
+        color: var(--light-gray);
+        margin: 3px 3px 3px 0;
+      }
+
+      .project-tag--accent {
+        border-color: hsla(45, 100%, 59%, 0.35);
+        color: var(--orange-yellow-crayola);
+        background: var(--bg-gradient-yellow-2);
+      }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--light-gray-70);
+        margin-bottom: 10px;
+        margin-top: 28px;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin: 14px 0 8px 0;
+      }
+
+      .feature-card {
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .feature-card-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--orange-yellow-crayola);
+        margin-bottom: 6px;
+      }
+
+      .feature-card-body {
+        font-size: 13px;
+        color: var(--light-gray);
+        line-height: 1.6;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--light-gray);
+        border: 1px solid var(--jet);
+        border-radius: 8px;
+        padding: 6px 14px;
+        transition: 0.25s ease;
+        margin-bottom: 4px;
+      }
+
+      .back-btn:hover {
+        border-color: var(--orange-yellow-crayola);
+        color: var(--orange-yellow-crayola);
+      }
+
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .project-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--orange-yellow-crayola);
+        color: var(--smoky-black);
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 11px 22px;
+        transition: 0.25s ease;
+      }
+
+      .project-link-btn:hover {
+        filter: brightness(1.1);
+        transform: translateY(-2px);
       }
     </style>
   </head>
@@ -24,118 +121,179 @@
   >
     <main style="max-width: 950px; margin: 60px auto; padding: 30px">
       <article class="content-card">
-        <a href="./index.html#projects" class="back-btn"> ← </a>
+        <a href="./index.html#projects" class="back-btn">← Back to Projects</a>
 
         <figure
           style="
-            margin: 25px 0;
-            align-items: center;
+            margin: 28px 0 20px 0;
             display: flex;
+            align-items: center;
             justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
           "
         >
           <img
             src="./assets/images/project-2.png"
-            alt="IMIMS Project"
-            style="width: 40%; border-radius: 12px"
+            alt="Concrete Strength Dashboard"
+            style="width: 38%; border-radius: 12px; min-width: 200px"
           />
-          <h2 class="h2-article-title">
-            Data-Driven Optimization of Concrete Strength Prediction
-          </h2>
+          <div>
+            <h2 class="h2 article-title" style="margin-bottom: 12px">
+              Predictive Modeling for Concrete Strength
+            </h2>
+            <div>
+              <span class="project-tag project-tag--accent">Python</span>
+              <span class="project-tag project-tag--accent">Streamlit</span>
+              <span class="project-tag project-tag--accent">Machine Learning</span>
+              <span class="project-tag project-tag--accent">GenAI</span>
+              <span class="project-tag">Ridge Regression</span>
+              <span class="project-tag">Decision Tree</span>
+              <span class="project-tag">LDA / QDA / KNN</span>
+              <span class="project-tag">Plotly</span>
+              <span class="project-tag">OpenRouter API</span>
+              <span class="project-tag">ReportLab</span>
+            </div>
+          </div>
         </figure>
 
-        <h2 class="h2 article-title"></h2>
-
         <section class="about-text">
+
+          <p class="section-label">Overview</p>
+          <p style="color: var(--light-gray); line-height: 1.8; font-size: 14px;">
+            Built an end-to-end <span class="p-highlight">interactive analytics dashboard</span>
+            in Python and Streamlit to analyze and predict concrete compressive strength across
+            <span class="p-highlight">1,030 mix design samples</span> spanning 8 material variables.
+            The dashboard spans four modules - from exploratory KPI insights to real-time
+            mix design prediction powered by <span class="p-highlight">GenAI recommendations</span>
+            via Google Gemini 2.5 Flash - and is designed to be both explainable and actionable
+            for engineering and product decision-making.
+          </p>
+
+          <p class="section-label">Dashboard Modules</p>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-card-title">KPI Insights Explorer</div>
+              <div class="feature-card-body">
+                Visualizes how each mix ingredient relates to compressive strength using
+                <span class="p-highlight">quantile binning</span>. Bins keep sample sizes
+                balanced for fair comparison, with error bars (SEM) to show confidence per bin.
+                Users select any KPI and the number of bins to interactively explore trends.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Model Explorer</div>
+              <div class="feature-card-body">
+                Four modeling lenses in one view: OLS scatter + trendline, standardized
+                coefficient bar charts for <span class="p-highlight">Linear and Ridge Regression</span>,
+                an interactive <span class="p-highlight">Decision Tree (depth-3)</span> visualization,
+                and a binary classification module (pass/fail against a user-defined MPa threshold)
+                with a confusion matrix and interpretation.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Predict Strength</div>
+              <div class="feature-card-body">
+                Real-time mix design prediction tool with slider inputs for all 8 ingredients.
+                Uses a <span class="p-highlight">Ridge Regression (RidgeCV, 5-fold CV)</span> model
+                trained on the dataset and outputs a gauge showing predicted vs target strength,
+                with a clear pass/fail indicator and margin.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">GenAI Recommendations</div>
+              <div class="feature-card-body">
+                Integrates <span class="p-highlight">Google Gemini 2.5 Flash</span> via the
+                OpenRouter API to generate structured, engineering-appropriate recommendations
+                (executive summary, detailed adjustments, conclusion) grounded in the predicted
+                vs target gap and input values. Togglable with a rule-based fallback.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">PDF Report Generation</div>
+              <div class="feature-card-body">
+                Generates a downloadable one-page PDF report using <span class="p-highlight">ReportLab</span>,
+                including prediction summary, input table (2-column layout), a cloud-safe gauge
+                visualization drawn natively in the PDF, and condensed GenAI recommendations.
+              </div>
+            </div>
+          </div>
+
+          <p class="section-label">Models Used</p>
           <ul>
             <li>
-              Conducted an end-to-end
-              <span class="p-highlight">predictive analytics study</span> on a
-              dataset of
-              <span class="p-highlight">1,030 concrete mix observations</span>
-              to analyze how material composition impacts
-              <span class="p-highlight">compressive strength</span>. Performed
-              extensive
-              <span class="p-highlight">exploratory data analysis (EDA)</span>
-              using statistical summaries, histograms, scatter plots, and
-              correlation heatmaps to uncover relationships among key variables
-              such as cement, water, slag, superplasticizer, and age.
+              <span class="p-highlight">Ridge Regression (RidgeCV)</span> - primary prediction model,
+              trained with 5-fold cross-validation across 50 alpha values on a 70/30 train-test split.
+              Handles multicollinearity from correlated ingredients (slag, ash, cement) with stable,
+              shrinkage-regularized coefficients.
             </li>
             <li>
-              Built and compared multiple regression models including
-              <span class="p-highlight"
-                >Linear, Ridge, and Lasso Regression</span
-              >
-              ,to predict concrete strength. Achieved an
-              <span class="p-highlight">R² of 61.6%</span>, identifying cement,
-              water, superplasticizer, and age as the most significant
-              predictors while mitigating multicollinearity through
-              regularization techniques.
+              <span class="p-highlight">Multiple Linear Regression</span> - full-dataset fit used for
+              interpretable standardized coefficient comparisons in the Model Explorer. Confirms cement
+              as the strongest positive driver and water as the strongest negative driver.
             </li>
-
             <li>
-              Designed and validated classification models including
-              <span class="p-highlight">Logistic Regression</span>,
-              <span class="p-highlight">LDA</span>, and
-              <span class="p-highlight">KNN</span> for binary strength
-              prediction (&gt;40 MPa), attaining a peak accuracy of
-              <span class="p-highlight">85.44%</span> to support reliable
-              decision-making on strength thresholds.
+              <span class="p-highlight">Decision Tree Regressor (max depth 3)</span> - rule-based
+              model that surfaces non-linear thresholds and ingredient interactions. Visualized as
+              a full tree plot for explainability.
             </li>
-
             <li>
-              Applied
-              <span class="p-highlight">cross-validation</span> techniques
-              (<span class="p-highlight">K-Fold</span> and
-              <span class="p-highlight">Validation Set Approach</span>) and
-              <span class="p-highlight">forward subset selection</span> to
-              refine feature selection and minimize model bias and variance.
-            </li>
-
-            <li>
-              Proposed an
-              <span class="p-highlight">optimization framework</span>
-              integrating insights from
-              <span class="p-highlight">Regression Tree analysis</span> and
-              <span class="p-highlight">Lean Six Sigma (DMAIC)</span>
-              methodology to recommend optimal material proportions, enhance
-              process control, and improve cost efficiency in concrete
-              production.
-            </li>
-
-            <li>
-              Summarized findings through
-              <span class="p-highlight">interpretive visualizations</span> and
-              detailed statistical reports, providing actionable insights for
-              both manufacturing optimization and predictive quality management
-              in construction materials.
+              <span class="p-highlight">Classification models</span> - Logistic Regression, LDA,
+              QDA, and KNN applied to a binary strength threshold (pass/fail at user-defined MPa).
+              Each includes a full confusion matrix with TP/FP/FN/TN breakdown and auto-generated
+              interpretation of error type dominance.
             </li>
           </ul>
+
+          <p class="section-label">Key Findings</p>
+          <ul>
+            <li>
+              <span class="p-highlight">Cement</span> is the strongest positive driver of
+              compressive strength across all models. Increasing cement content consistently
+              raises strength predictions.
+            </li>
+            <li>
+              <span class="p-highlight">Water</span> is the strongest negative driver.
+              Higher water-to-cement ratio weakens the bond structure, reducing strength.
+            </li>
+            <li>
+              <span class="p-highlight">Age</span> is a strong positive factor, especially
+              in early curing stages. Strength grows as hydration progresses over time.
+            </li>
+            <li>
+              <span class="p-highlight">Superplasticizer</span> shows moderate positive impact
+              by enabling lower water content while maintaining workability - improving the
+              water-to-cement ratio indirectly.
+            </li>
+            <li>
+              Slag and ash contribute positively but are correlated with other variables,
+              so their individual effect is best read via Ridge coefficients rather than
+              simple correlation.
+            </li>
+          </ul>
+
         </section>
 
-        <div
-          style="
-            text-align: center;
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-          "
-        >
-          <!-- View Project Report Button -->
+        <div class="btn-row">
           <a
-            href="./assets/files/Data-DrivenConcreteStrenghtPredictionreport.pdf"
+            href="https://predictive-modeling-concrete-strength.streamlit.app/"
             target="_blank"
-            class="resume-download-btn"
+            rel="noopener noreferrer"
+            class="project-link-btn"
           >
-            📄 View Full Project Report
+            &#x1F4CA; View Live Dashboard
           </a>
-          <a href="./index.html#projects" class="resume-download-btn"
-            >← Back to Projects</a
-          >
+          <a href="./index.html#projects" class="resume-download-btn">
+            ← Back to Projects
+          </a>
         </div>
       </article>
     </main>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </body>
 </html>
