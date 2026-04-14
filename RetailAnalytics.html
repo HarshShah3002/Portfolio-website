@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retail Analytics Dashboard - Project Details</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      article,
+      main {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      .project-tag {
+        display: inline-block;
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 6px;
+        padding: 4px 11px;
+        font-size: 12px;
+        color: var(--light-gray);
+        margin: 3px 3px 3px 0;
+      }
+
+      .section-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--light-gray-70);
+        margin-bottom: 10px;
+        margin-top: 28px;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin: 14px 0 8px 0;
+      }
+
+      .feature-card {
+        background: var(--bg-gradient-onyx);
+        border: 1px solid var(--jet);
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .feature-card-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--orange-yellow-crayola);
+        margin-bottom: 6px;
+      }
+
+      .feature-card-body {
+        font-size: 13px;
+        color: var(--light-gray);
+        line-height: 1.6;
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: var(--light-gray);
+        border: 1px solid var(--jet);
+        border-radius: 8px;
+        padding: 6px 14px;
+        transition: 0.25s ease;
+        margin-bottom: 4px;
+      }
+
+      .back-btn:hover {
+        border-color: var(--orange-yellow-crayola);
+        color: var(--orange-yellow-crayola);
+      }
+
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .project-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--orange-yellow-crayola);
+        color: var(--smoky-black);
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 11px 22px;
+        transition: 0.25s ease;
+      }
+
+      .project-link-btn:hover {
+        filter: brightness(1.1);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: var(--smoky-black);
+      color: var(--white-2);
+      font-family: 'Poppins', sans-serif;
+    "
+  >
+    <main style="max-width: 950px; margin: 60px auto; padding: 30px">
+      <article class="content-card">
+        <a href="./index.html#projects" class="back-btn">&#8592; Back to Projects</a>
+
+        <figure
+          style="
+            margin: 28px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+          "
+        >
+          <img
+            src="./assets/images/project-4.png"
+            alt="Retail Analytics Dashboard"
+            style="width: 38%; border-radius: 12px; min-width: 200px"
+          />
+          <div>
+            <h2 class="h2 article-title" style="margin-bottom: 12px">
+              Retail Analytics Dashboard
+            </h2>
+            <div>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">Plotly</span>
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">Scikit-learn</span>
+              <span class="project-tag">MLxtend</span>
+              <span class="project-tag">Random Forest</span>
+              <span class="project-tag">Apriori</span>
+              <span class="project-tag">Gemini 2.0 Flash</span>
+              <span class="project-tag">OpenRouter API</span>
+            </div>
+          </div>
+        </figure>
+
+        <section class="about-text">
+
+          <p class="section-label">Overview</p>
+          <p style="color: var(--light-gray); line-height: 1.8; font-size: 14px;">
+            Built an end-to-end <span class="p-highlight">retail analytics platform</span>
+            processing over <span class="p-highlight">1 million raw transactional records</span>
+            into a seven-tab interactive Streamlit dashboard. The pipeline cleans and stores
+            <span class="p-highlight">805,549 transactions</span> across 5,878 customers and
+            36,969 orders into a <span class="p-highlight">MySQL database</span>, then surfaces
+            executive KPIs, customer segmentation, market basket intelligence, and ML-powered
+            sales forecasting - all wrapped with a conversational
+            <span class="p-highlight">AI Business Analyst</span> powered by Google Gemini 2.0
+            Flash.
+          </p>
+
+          <p class="section-label">Dashboard Modules</p>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-card-title">ETL &amp; Data Pipeline</div>
+              <div class="feature-card-body">
+                Ingested and cleaned <span class="p-highlight">1,067,371 raw rows</span>
+                from a UK-based online retailer dataset, removing cancellations, invalid
+                stock codes, and null customers to produce a clean
+                <span class="p-highlight">805,549-row dataset</span>. Derived revenue,
+                quantity, and order metrics and loaded everything into a normalized
+                <span class="p-highlight">MySQL schema</span> for downstream querying.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Executive KPI Dashboard</div>
+              <div class="feature-card-body">
+                Surfaces key business metrics across the full dataset: total revenue of
+                <span class="p-highlight">£17.7M</span>, 5,878 unique customers, and 36,969
+                orders. Built interactive <span class="p-highlight">Plotly visualizations</span>
+                for monthly revenue trends, top products by revenue and volume, and
+                country-level performance - driven directly from
+                <span class="p-highlight">MySQL queries</span> at render time.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">RFM Customer Segmentation</div>
+              <div class="feature-card-body">
+                Scored all customers on <span class="p-highlight">Recency, Frequency,
+                and Monetary</span> dimensions to produce 8 behavioral segments. Identified
+                that <span class="p-highlight">Champions (22% of customers)</span> drive
+                <span class="p-highlight">68% of total revenue (£12.1M)</span>, while
+                At Risk customers represent over <span class="p-highlight">£1M in
+                revenue</span> at risk of churn - enabling targeted retention campaigns
+                for each segment.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">Market Basket Analysis</div>
+              <div class="feature-card-body">
+                Applied the <span class="p-highlight">Apriori algorithm</span> via MLxtend
+                to mine <span class="p-highlight">60 association rules</span> from transaction
+                data. Surfaced cross-sell opportunities with lift scores up to
+                <span class="p-highlight">29.9</span> - the strongest rule linking Blue and
+                Pink Spotty Party Candles. Rules are filterable by support, confidence, and
+                lift for product bundling and placement decisions.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">ML Sales Forecasting</div>
+              <div class="feature-card-body">
+                Trained a <span class="p-highlight">Random Forest Regressor</span> on
+                time-enriched features (lag values, rolling means, day-of-week, month) to
+                predict weekly revenue. Achieved an <span class="p-highlight">R² of 0.707</span>
+                on the holdout set, with a forecast for H1 2012 projecting
+                <span class="p-highlight">£3.6M in revenue</span>. Feature importance
+                analysis confirmed lag-1 revenue as the dominant predictor.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card-title">AI Business Analyst</div>
+              <div class="feature-card-body">
+                Integrated <span class="p-highlight">Google Gemini 2.0 Flash</span> via
+                OpenRouter API to create a conversational analyst layer. The AI is preloaded
+                with full dataset context - RFM segments, basket rules, forecast figures,
+                and behavioral patterns - and responds to natural language queries with
+                structured, data-grounded business recommendations.
+              </div>
+            </div>
+          </div>
+
+          <p class="section-label">Key Findings</p>
+          <ul>
+            <li>
+              <span class="p-highlight">Champions segment (22% of customers)</span> generate
+              68% of total revenue (£12.1M out of £17.7M) - confirming extreme revenue
+              concentration and making retention of this segment the single highest-leverage
+              business priority.
+            </li>
+            <li>
+              <span class="p-highlight">At Risk customers</span> represent over £1M in
+              revenue at risk of churn, with clear signals (declining recency and frequency)
+              that allow targeted win-back campaigns before revenue is lost.
+            </li>
+            <li>
+              <span class="p-highlight">Saturday orders drop to near-zero</span> (~30 orders
+              vs ~7,773 on Thursdays), confirming the customer base is predominantly
+              B2B - with ordering patterns tightly coupled to business working hours.
+            </li>
+            <li>
+              <span class="p-highlight">Netherlands customers</span> average £2,430 per order
+              compared to £439 for UK customers - identifying high-value international
+              segments worth prioritizing for volume-based growth.
+            </li>
+            <li>
+              <span class="p-highlight">Market basket lift of 29.9</span> between Blue and
+              Pink Spotty Party Candles represents the strongest cross-sell opportunity
+              identified, with 60 total actionable association rules available for
+              product bundling and placement strategy.
+            </li>
+            <li>
+              <span class="p-highlight">Random Forest R² = 0.707</span> on the holdout
+              test set, with lag-1 weekly revenue as the most predictive feature -
+              enabling reliable short-horizon revenue forecasting for inventory and
+              procurement planning.
+            </li>
+          </ul>
+
+        </section>
+
+        <div class="btn-row">
+          <a
+            href="https://harsh-retail-analytics-project.streamlit.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link-btn"
+          >
+            &#x1F4CA; View Live Dashboard
+          </a>
+          <a href="./index.html#projects" class="resume-download-btn">
+            &#8592; Back to Projects
+          </a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
