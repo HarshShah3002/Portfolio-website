@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a26"/>
+      <stop offset="100%" stop-color="#12121c"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="hsl(45,100%,65%)"/>
+      <stop offset="100%" stop-color="hsl(45,100%,45%)"/>
+    </linearGradient>
+    <linearGradient id="barGradDim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="hsl(45,100%,59%)" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="hsl(45,100%,40%)" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bgGrad4)" rx="12"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="48" y1="30" x2="48" y2="210" stroke="#ffffff06" stroke-width="1"/>
+  <line x1="48" y1="210" x2="280" y2="210" stroke="#2a2a3e" stroke-width="1"/>
+  <line x1="48" y1="170" x2="280" y2="170" stroke="#ffffff07" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="48" y1="130" x2="280" y2="130" stroke="#ffffff07" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="48" y1="90" x2="280" y2="90" stroke="#ffffff07" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="48" y1="50" x2="280" y2="50" stroke="#ffffff07" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- Y-axis labels -->
+  <text x="42" y="173" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="end">0</text>
+  <text x="42" y="133" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="end">1M</text>
+  <text x="42" y="93" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="end">2M</text>
+  <text x="42" y="53" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="end">3M</text>
+
+  <!-- Month bars (12 months of revenue) -->
+  <rect x="53"  y="188" width="14" height="22" fill="url(#barGradDim)" rx="2"/>
+  <rect x="70"  y="175" width="14" height="35" fill="url(#barGradDim)" rx="2"/>
+  <rect x="87"  y="162" width="14" height="48" fill="url(#barGradDim)" rx="2"/>
+  <rect x="104" y="150" width="14" height="60" fill="url(#barGradDim)" rx="2"/>
+  <rect x="121" y="138" width="14" height="72" fill="url(#barGrad)" rx="2"/>
+  <rect x="138" y="126" width="14" height="84" fill="url(#barGrad)" rx="2"/>
+  <rect x="155" y="118" width="14" height="92" fill="url(#barGrad)" rx="2"/>
+  <rect x="172" y="108" width="14" height="102" fill="url(#barGrad)" rx="2"/>
+  <rect x="189" y="78"  width="14" height="132" fill="url(#barGrad)" rx="2"/>
+  <rect x="206" y="62"  width="14" height="148" fill="url(#barGrad)" rx="2"/>
+  <rect x="223" y="48"  width="14" height="162" fill="url(#barGrad)" rx="2"/>
+  <rect x="240" y="55"  width="14" height="155" fill="url(#barGrad)" rx="2"/>
+
+  <!-- Month labels -->
+  <text x="60"  y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#444460" text-anchor="middle">J</text>
+  <text x="77"  y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#444460" text-anchor="middle">F</text>
+  <text x="94"  y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#444460" text-anchor="middle">M</text>
+  <text x="111" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#444460" text-anchor="middle">A</text>
+  <text x="128" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#666680" text-anchor="middle">M</text>
+  <text x="145" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#666680" text-anchor="middle">J</text>
+  <text x="162" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#666680" text-anchor="middle">J</text>
+  <text x="179" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#666680" text-anchor="middle">A</text>
+  <text x="196" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#888899" text-anchor="middle">S</text>
+  <text x="213" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="#888899" text-anchor="middle">O</text>
+  <text x="230" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="hsl(45,100%,59%)" text-anchor="middle">N</text>
+  <text x="247" y="222" font-family="Poppins, sans-serif" font-size="6.5" fill="hsl(45,100%,59%)" text-anchor="middle">D</text>
+
+  <!-- Right panel -->
+  <!-- Revenue metric card -->
+  <rect x="293" y="28" width="96" height="56" fill="#1e1e2e" rx="8" stroke="#2e2e42" stroke-width="1"/>
+  <text x="341" y="47" font-family="Poppins, sans-serif" font-size="8.5" fill="#7a7a9e" text-anchor="middle">Total Revenue</text>
+  <text x="341" y="63" font-family="Poppins, sans-serif" font-size="15" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="700">£17.7M</text>
+  <text x="341" y="76" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="middle">36,969 orders</text>
+
+  <!-- Customers metric card -->
+  <rect x="293" y="92" width="96" height="44" fill="#1e1e2e" rx="8" stroke="#2e2e42" stroke-width="1"/>
+  <text x="341" y="108" font-family="Poppins, sans-serif" font-size="8" fill="#7a7a9e" text-anchor="middle">Customers</text>
+  <text x="341" y="126" font-family="Poppins, sans-serif" font-size="13" fill="#ccccee" text-anchor="middle" font-weight="600">5,878</text>
+
+  <!-- RFM donut mini card -->
+  <rect x="293" y="144" width="96" height="72" fill="#1e1e2e" rx="8" stroke="#2e2e42" stroke-width="1"/>
+  <text x="341" y="158" font-family="Poppins, sans-serif" font-size="7.5" fill="#7a7a9e" text-anchor="middle">RFM Segments</text>
+  <!-- Donut chart -->
+  <circle cx="341" cy="192" r="20" fill="none" stroke="#2a2a3e" stroke-width="9"/>
+  <!-- Champions 68% -->
+  <circle cx="341" cy="192" r="20" fill="none" stroke="hsl(45,100%,59%)" stroke-width="9"
+          stroke-dasharray="85.3 125.7" stroke-dashoffset="31.4" stroke-linecap="butt"/>
+  <!-- At Risk ~6% -->
+  <circle cx="341" cy="192" r="20" fill="none" stroke="#e05252" stroke-width="9"
+          stroke-dasharray="7.5 203.5" stroke-dashoffset="-54" stroke-linecap="butt"/>
+  <!-- Others -->
+  <circle cx="341" cy="192" r="20" fill="none" stroke="#4a90d9" stroke-width="9"
+          stroke-dasharray="18 193" stroke-dashoffset="-61.5" stroke-linecap="butt"/>
+
+  <!-- Donut legend -->
+  <rect x="297" y="205" width="6" height="6" fill="hsl(45,100%,59%)" rx="1"/>
+  <text x="306" y="211" font-family="Poppins, sans-serif" font-size="6.5" fill="#aaaacc">Champions 68%</text>
+  <rect x="297" y="213" width="6" height="6" fill="#e05252" rx="1"/>
+  <text x="306" y="219" font-family="Poppins, sans-serif" font-size="6.5" fill="#aaaacc">At Risk £1M+</text>
+
+  <!-- AI badge -->
+  <rect x="293" y="224" width="96" height="20" fill="#1e1e2e" rx="6" stroke="#2e2e42" stroke-width="1"/>
+  <text x="341" y="237" font-family="Poppins, sans-serif" font-size="7" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="600">&#x2728; AI Business Analyst</text>
+
+  <!-- Title bar -->
+  <rect x="0" y="228" width="400" height="32" fill="#12121c" rx="0"/>
+  <rect x="0" y="228" width="400" height="32" fill="#12121c"/>
+  <rect x="0" y="240" width="400" height="20" fill="#12121c" rx="12"/>
+  <rect x="0" y="228" width="400" height="14" fill="#12121c"/>
+  <text x="20" y="241" font-family="Poppins, sans-serif" font-size="10" fill="hsl(45,100%,59%)" font-weight="700">RETAIL ANALYTICS DASHBOARD</text>
+  <text x="20" y="253" font-family="Poppins, sans-serif" font-size="7.5" fill="#555570">MySQL · Streamlit · Random Forest · Apriori · Gemini AI</text>
+</svg>

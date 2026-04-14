@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a26"/>
+      <stop offset="100%" stop-color="#12121c"/>
+    </linearGradient>
+    <filter id="kpGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bgGrad3)" rx="12"/>
+
+  <!-- Camera frame corners (webcam UI) -->
+  <path d="M 18 18 L 18 10 L 10 10" stroke="hsl(45,100%,59%)" stroke-width="1.8" fill="none" opacity="0.6"/>
+  <path d="M 205 18 L 205 10 L 213 10" stroke="hsl(45,100%,59%)" stroke-width="1.8" fill="none" opacity="0.6"/>
+  <path d="M 18 222 L 18 230 L 10 230" stroke="hsl(45,100%,59%)" stroke-width="1.8" fill="none" opacity="0.6"/>
+  <path d="M 205 222 L 205 230 L 213 230" stroke="hsl(45,100%,59%)" stroke-width="1.8" fill="none" opacity="0.6"/>
+
+  <!-- Camera frame label -->
+  <rect x="10" y="10" width="15" height="8" fill="hsl(45,100%,59%)" rx="2" opacity="0.85"/>
+  <text x="17" y="17" font-family="Poppins, sans-serif" font-size="5.5" fill="#12121c" text-anchor="middle" font-weight="700">LIVE</text>
+
+  <!-- === SKELETON: Tree Pose === -->
+  <!-- Head -->
+  <circle cx="112" cy="42" r="11" fill="none" stroke="#5555aa" stroke-width="1.2" opacity="0.7"/>
+  <circle cx="112" cy="42" r="3" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+
+  <!-- Neck -->
+  <circle cx="112" cy="58" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <line x1="112" y1="42" x2="112" y2="58" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Shoulders -->
+  <line x1="112" y1="58" x2="88" y2="76" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="112" y1="58" x2="136" y2="76" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="88" cy="76" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <circle cx="136" cy="76" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+
+  <!-- Left arm (out to side) -->
+  <line x1="88" y1="76" x2="64" y2="95" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="64" y1="95" x2="48" y2="114" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="64" cy="95" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <circle cx="48" cy="114" r="2.5" fill="#88ffbb" filter="url(#kpGlow)" opacity="0.8"/>
+
+  <!-- Right arm (raised up) -->
+  <line x1="136" y1="76" x2="156" y2="55" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="156" y1="55" x2="170" y2="36" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="156" cy="55" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <circle cx="170" cy="36" r="2.5" fill="#88ffbb" filter="url(#kpGlow)" opacity="0.8"/>
+
+  <!-- Torso -->
+  <line x1="112" y1="58" x2="112" y2="140" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="112" cy="100" r="2" fill="#5555cc" opacity="0.5"/>
+
+  <!-- Hips -->
+  <circle cx="112" cy="140" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <line x1="112" y1="140" x2="96" y2="148" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="112" y1="140" x2="128" y2="148" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="96" cy="148" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <circle cx="128" cy="148" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+
+  <!-- Standing leg (right side) -->
+  <line x1="128" y1="148" x2="126" y2="185" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="126" y1="185" x2="124" y2="218" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="126" cy="185" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <circle cx="124" cy="218" r="2.5" fill="#88ffbb" filter="url(#kpGlow)" opacity="0.8"/>
+
+  <!-- Tree pose raised leg (bent outward) -->
+  <line x1="96" y1="148" x2="74" y2="170" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <line x1="74" y1="170" x2="82" y2="196" stroke="#5555cc" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="74" cy="170" r="2.5" fill="hsl(45,100%,59%)" filter="url(#kpGlow)" opacity="0.9"/>
+  <circle cx="82" cy="196" r="2.5" fill="#88ffbb" filter="url(#kpGlow)" opacity="0.8"/>
+
+  <!-- Keypoint count label -->
+  <text x="112" y="240" font-family="Poppins, sans-serif" font-size="7" fill="#5555aa" text-anchor="middle">33 keypoints</text>
+
+  <!-- === RIGHT PANEL === -->
+  <rect x="228" y="18" width="162" height="210" fill="#18182a" rx="10" stroke="#2a2a3e" stroke-width="1"/>
+
+  <!-- Model header -->
+  <text x="309" y="34" font-family="Poppins, sans-serif" font-size="8" fill="#7a7a9e" text-anchor="middle">POSE CLASSIFICATION</text>
+
+  <!-- Pose confidence bars -->
+  <!-- Tree - active -->
+  <rect x="236" y="40" width="146" height="28" fill="#1e2838" rx="6" stroke="hsl(45,100%,59%)" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="244" y="52" font-family="Poppins, sans-serif" font-size="8" fill="hsl(45,100%,59%)" font-weight="600">Tree</text>
+  <rect x="244" y="56" width="130" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="56" width="122" height="5" fill="hsl(45,100%,59%)" rx="2"/>
+  <text x="378" y="61" font-family="Poppins, sans-serif" font-size="7" fill="hsl(45,100%,59%)" text-anchor="end">94%</text>
+
+  <!-- Warrior -->
+  <text x="244" y="84" font-family="Poppins, sans-serif" font-size="8" fill="#ccccdd">Warrior</text>
+  <rect x="244" y="87" width="130" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="87" width="52" height="5" fill="#4a90d9" rx="2" opacity="0.7"/>
+  <text x="378" y="92" font-family="Poppins, sans-serif" font-size="7" fill="#4a90d9" text-anchor="end">40%</text>
+
+  <!-- Plank -->
+  <text x="244" y="108" font-family="Poppins, sans-serif" font-size="8" fill="#ccccdd">Plank</text>
+  <rect x="244" y="111" width="130" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="111" width="16" height="5" fill="#666680" rx="2" opacity="0.7"/>
+  <text x="378" y="116" font-family="Poppins, sans-serif" font-size="7" fill="#666680" text-anchor="end">12%</text>
+
+  <!-- Downdog -->
+  <text x="244" y="132" font-family="Poppins, sans-serif" font-size="8" fill="#ccccdd">Downdog</text>
+  <rect x="244" y="135" width="130" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="135" width="8" height="5" fill="#666680" rx="2" opacity="0.7"/>
+  <text x="378" y="140" font-family="Poppins, sans-serif" font-size="7" fill="#666680" text-anchor="end">6%</text>
+
+  <!-- Goddess -->
+  <text x="244" y="156" font-family="Poppins, sans-serif" font-size="8" fill="#ccccdd">Goddess</text>
+  <rect x="244" y="159" width="130" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="159" width="4" height="5" fill="#666680" rx="2" opacity="0.7"/>
+  <text x="378" y="164" font-family="Poppins, sans-serif" font-size="7" fill="#666680" text-anchor="end">3%</text>
+
+  <!-- Divider -->
+  <line x1="236" y1="174" x2="382" y2="174" stroke="#2a2a3e" stroke-width="1"/>
+
+  <!-- Model info -->
+  <text x="244" y="187" font-family="Poppins, sans-serif" font-size="7.5" fill="#7a7a9e">Model</text>
+  <text x="244" y="198" font-family="Poppins, sans-serif" font-size="8" fill="#ccccdd" font-weight="600">MediaPipe Pose</text>
+
+  <!-- Accuracy badge -->
+  <rect x="236" y="205" width="74" height="18" fill="#1e2838" rx="5" stroke="hsl(45,100%,59%)" stroke-width="0.8"/>
+  <text x="273" y="217" font-family="Poppins, sans-serif" font-size="8" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="700">98.7% Acc</text>
+
+  <!-- False detect badge -->
+  <rect x="314" y="205" width="68" height="18" fill="#1e2838" rx="5" stroke="#4ade80" stroke-width="0.8"/>
+  <text x="348" y="217" font-family="Poppins, sans-serif" font-size="7.5" fill="#4ade80" text-anchor="middle" font-weight="600">-22% FDR</text>
+
+  <!-- Title bar -->
+  <rect x="0" y="232" width="400" height="28" fill="#12121c" rx="0"/>
+  <rect x="0" y="244" width="400" height="16" fill="#12121c" rx="12"/>
+  <rect x="0" y="232" width="400" height="12" fill="#12121c"/>
+  <text x="20" y="244" font-family="Poppins, sans-serif" font-size="10" fill="hsl(45,100%,59%)" font-weight="700">YOGA POSE DETECTION</text>
+  <text x="20" y="255" font-family="Poppins, sans-serif" font-size="7.5" fill="#555570">MediaPipe · MoveNet · Real-Time · 6,000 Images · 5 Asanas</text>
+</svg>

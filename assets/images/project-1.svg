@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a26"/>
+      <stop offset="100%" stop-color="#12121c"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a3e"/>
+      <stop offset="100%" stop-color="#1e1e30"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="hsl(45,100%,59%)" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bgGrad1)" rx="12"/>
+
+  <!-- Subtle dot grid -->
+  <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="0.8" fill="#ffffff08"/>
+  </pattern>
+  <rect width="400" height="260" fill="url(#dots)" rx="12"/>
+
+  <!-- === FLOW DIAGRAM === -->
+
+  <!-- Node 1: Vendors / Procurement -->
+  <rect x="18" y="80" width="88" height="52" fill="url(#nodeGrad)" rx="10" stroke="#3a3a54" stroke-width="1.2"/>
+  <text x="62" y="100" font-family="Poppins, sans-serif" font-size="8" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="600">VENDORS</text>
+  <text x="62" y="113" font-family="Poppins, sans-serif" font-size="7" fill="#8888aa" text-anchor="middle">Procurement</text>
+  <!-- vendor icon (3 small boxes) -->
+  <rect x="48" y="120" width="8" height="7" fill="none" stroke="#555570" stroke-width="0.8" rx="1"/>
+  <rect x="58" y="120" width="8" height="7" fill="none" stroke="#555570" stroke-width="0.8" rx="1"/>
+  <rect x="68" y="120" width="8" height="7" fill="none" stroke="#555570" stroke-width="0.8" rx="1"/>
+
+  <!-- Arrow 1 → 2 -->
+  <line x1="107" y1="106" x2="143" y2="106" stroke="hsl(45,100%,59%)" stroke-width="1.4" stroke-opacity="0.65" marker-end="url(#arrow)"/>
+
+  <!-- Node 2: D365 + L2L (center main) -->
+  <rect x="144" y="60" width="112" height="92" fill="#1e1e2e" rx="10" stroke="hsl(45,100%,59%)" stroke-width="1.4" stroke-opacity="0.5"/>
+  <text x="200" y="82" font-family="Poppins, sans-serif" font-size="8.5" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="700">IMIMS CORE</text>
+  <!-- D365 badge -->
+  <rect x="152" y="88" width="44" height="18" fill="#252538" rx="5" stroke="#3a3a54" stroke-width="0.8"/>
+  <text x="174" y="100" font-family="Poppins, sans-serif" font-size="7" fill="#aaaacc" text-anchor="middle">D365</text>
+  <!-- L2L badge -->
+  <rect x="204" y="88" width="44" height="18" fill="#252538" rx="5" stroke="#3a3a54" stroke-width="0.8"/>
+  <text x="226" y="100" font-family="Poppins, sans-serif" font-size="7" fill="#aaaacc" text-anchor="middle">L2L</text>
+  <!-- IoT icon (wifi symbol) -->
+  <text x="200" y="122" font-family="Poppins, sans-serif" font-size="9" fill="#7a7a9e" text-anchor="middle">IoT Tracking</text>
+  <!-- Small signal arcs -->
+  <path d="M188,134 Q200,128 212,134" fill="none" stroke="#4a90d9" stroke-width="1.2" stroke-opacity="0.7"/>
+  <path d="M193,140 Q200,136 207,140" fill="none" stroke="#4a90d9" stroke-width="1.2" stroke-opacity="0.7"/>
+  <circle cx="200" cy="144" r="2.5" fill="#4a90d9" opacity="0.7"/>
+
+  <!-- Arrow 2 → 3 -->
+  <line x1="257" y1="106" x2="293" y2="106" stroke="hsl(45,100%,59%)" stroke-width="1.4" stroke-opacity="0.65" marker-end="url(#arrow)"/>
+
+  <!-- Node 3: Inventory / Warehouse -->
+  <rect x="294" y="80" width="88" height="52" fill="url(#nodeGrad)" rx="10" stroke="#3a3a54" stroke-width="1.2"/>
+  <text x="338" y="100" font-family="Poppins, sans-serif" font-size="8" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="600">INVENTORY</text>
+  <text x="338" y="113" font-family="Poppins, sans-serif" font-size="7" fill="#8888aa" text-anchor="middle">Warehouse</text>
+  <!-- shelf icon -->
+  <line x1="316" y1="128" x2="360" y2="128" stroke="#555570" stroke-width="0.8"/>
+  <line x1="316" y1="122" x2="316" y2="132" stroke="#555570" stroke-width="0.8"/>
+  <line x1="360" y1="122" x2="360" y2="132" stroke="#555570" stroke-width="0.8"/>
+  <rect x="320" y="122" width="9" height="6" fill="#3a3a54" rx="1"/>
+  <rect x="331" y="122" width="9" height="6" fill="#3a3a54" rx="1"/>
+  <rect x="342" y="122" width="9" height="6" fill="hsl(45,100%,59%)" rx="1" opacity="0.6"/>
+
+  <!-- Bottom section: KPI metrics row -->
+  <rect x="18" y="168" width="364" height="56" fill="#18182a" rx="10" stroke="#2a2a3e" stroke-width="1"/>
+
+  <!-- KPI 1: Cycle Time -->
+  <text x="82" y="186" font-family="Poppins, sans-serif" font-size="7.5" fill="#7a7a9e" text-anchor="middle">Cycle Time</text>
+  <text x="82" y="200" font-family="Poppins, sans-serif" font-size="14" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="700">-50%</text>
+  <text x="82" y="214" font-family="Poppins, sans-serif" font-size="6.5" fill="#555570" text-anchor="middle">reduction</text>
+
+  <line x1="146" y1="172" x2="146" y2="220" stroke="#2a2a3e" stroke-width="1"/>
+
+  <!-- KPI 2: Error Rate -->
+  <text x="200" y="186" font-family="Poppins, sans-serif" font-size="7.5" fill="#7a7a9e" text-anchor="middle">Error Rate</text>
+  <text x="200" y="200" font-family="Poppins, sans-serif" font-size="14" fill="#4ade80" text-anchor="middle" font-weight="700">&lt;5%</text>
+  <text x="200" y="214" font-family="Poppins, sans-serif" font-size="6.5" fill="#555570" text-anchor="middle">target</text>
+
+  <line x1="254" y1="172" x2="254" y2="220" stroke="#2a2a3e" stroke-width="1"/>
+
+  <!-- KPI 3: Cost Reduction -->
+  <text x="318" y="186" font-family="Poppins, sans-serif" font-size="7.5" fill="#7a7a9e" text-anchor="middle">Op. Costs</text>
+  <text x="318" y="200" font-family="Poppins, sans-serif" font-size="14" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="700">-20%</text>
+  <text x="318" y="214" font-family="Poppins, sans-serif" font-size="6.5" fill="#555570" text-anchor="middle">projected</text>
+
+  <!-- Title bar -->
+  <rect x="0" y="232" width="400" height="28" fill="#12121c" rx="0"/>
+  <rect x="0" y="244" width="400" height="16" fill="#12121c" rx="12"/>
+  <rect x="0" y="232" width="400" height="12" fill="#12121c"/>
+  <text x="20" y="244" font-family="Poppins, sans-serif" font-size="10" fill="hsl(45,100%,59%)" font-weight="700">TOOL CRIB IMIMS</text>
+  <text x="20" y="255" font-family="Poppins, sans-serif" font-size="7.5" fill="#555570">Systems Engineering · IoT · D365 · BSC · VSM · Capstone</text>
+</svg>

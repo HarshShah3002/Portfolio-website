@@ -12,8 +12,7 @@
       rel="stylesheet"
     />
     <style>
-      article,
-      main {
+      article, main {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -64,7 +63,31 @@
       .feature-card-body {
         font-size: 13px;
         color: var(--light-gray);
-        line-height: 1.6;
+        line-height: 1.7;
+      }
+
+      .about-text ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+      }
+
+      .about-text li {
+        font-size: 13px;
+        color: var(--light-gray);
+        line-height: 1.7;
+        padding-left: 16px;
+        position: relative;
+      }
+
+      .about-text li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--orange-yellow-crayola);
       }
 
       .back-btn {
@@ -78,11 +101,32 @@
         padding: 6px 14px;
         transition: 0.25s ease;
         margin-bottom: 4px;
+        background: transparent;
       }
 
       .back-btn:hover {
         border-color: var(--orange-yellow-crayola);
-        color: var(--orange-yellow-crayola);
+        color: var(--white-2);
+        background: hsla(45, 100%, 59%, 0.12);
+      }
+
+      .project-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--orange-yellow-crayola);
+        color: var(--smoky-black);
+        font-weight: 600;
+        font-size: 13px;
+        border-radius: 8px;
+        padding: 9px 20px;
+        transition: 0.25s ease;
+        margin-top: 14px;
+      }
+
+      .project-link-btn:hover {
+        filter: brightness(1.1);
+        transform: translateY(-2px);
       }
 
       .btn-row {
@@ -94,29 +138,14 @@
       }
     </style>
   </head>
-  <body
-    style="
-      background: var(--smoky-black);
-      color: var(--white-2);
-      font-family: 'Poppins', sans-serif;
-    "
-  >
+  <body style="background: var(--smoky-black); color: var(--white-2); font-family: 'Poppins', sans-serif;">
     <main style="max-width: 950px; margin: 60px auto; padding: 30px">
       <article class="content-card">
-        <a href="./index.html#projects" class="back-btn">← Back to Projects</a>
+        <a href="./index.html#projects" class="back-btn">&#8592; Back to Projects</a>
 
-        <figure
-          style="
-            margin: 28px 0 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 32px;
-            flex-wrap: wrap;
-          "
-        >
+        <figure style="margin: 28px 0 4px 0; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;">
           <img
-            src="./assets/images/project-1.png"
+            src="./assets/images/project-1.svg"
             alt="Tool Crib IMIMS Project"
             style="width: 38%; border-radius: 12px; min-width: 200px"
           />
@@ -135,16 +164,23 @@
               <span class="project-tag">MCS / LOC</span>
               <span class="project-tag">Capstone</span>
             </div>
+            <a
+              href="./assets/files/ToolCribsIMSReport.pdf"
+              target="_blank"
+              class="project-link-btn"
+            >
+              &#x1F4C4; View Full Project Report
+            </a>
           </div>
         </figure>
 
         <section class="about-text">
 
           <p class="section-label">Overview</p>
-          <p style="color: var(--light-gray); line-height: 1.8; font-size: 14px;">
+          <p style="color: var(--light-gray); line-height: 1.7; font-size: 13px;">
             Led a two-semester capstone project for <span class="p-highlight">Rochester Sensors</span>
             to design and deliver a comprehensive <span class="p-highlight">Indirect Materials Inventory
-            Management System (IMIMS)</span> — addressing procurement inefficiencies, real-time
+            Management System (IMIMS)</span> - addressing procurement inefficiencies, real-time
             inventory visibility gaps, and vendor management challenges across the organization's
             warehouse operations. The project spanned the full <span class="p-highlight">systems
             engineering lifecycle</span>, from requirements and architecture through strategic
@@ -154,7 +190,7 @@
           <p class="section-label">What Was Built</p>
           <div class="feature-grid">
             <div class="feature-card">
-              <div class="feature-card-title">Product Vision & Roadmap</div>
+              <div class="feature-card-title">Product Vision &amp; Roadmap</div>
               <div class="feature-card-body">
                 Defined the product vision and roadmap by integrating
                 <span class="p-highlight">IoT-based tracking</span>, Microsoft D365, and the
@@ -164,7 +200,7 @@
               </div>
             </div>
             <div class="feature-card">
-              <div class="feature-card-title">System Architecture & Planning</div>
+              <div class="feature-card-title">System Architecture &amp; Planning</div>
               <div class="feature-card-body">
                 Designed the full system architecture, project charter, risk and quality management
                 plans, and compliance matrices. Applied a complete
@@ -213,7 +249,7 @@
             </li>
             <li>
               Delivered a complete systems engineering documentation package including architecture
-              diagrams, BSC dashboards, risk registers, and implementation roadmaps — ready for
+              diagrams, BSC dashboards, risk registers, and implementation roadmaps - ready for
               handoff to the client engineering and operations teams.
             </li>
           </ul>
@@ -221,15 +257,8 @@
         </section>
 
         <div class="btn-row">
-          <a
-            href="./assets/files/ToolCribsIMSReport.pdf"
-            target="_blank"
-            class="resume-download-btn"
-          >
-            &#x1F4C4; View Full Project Report
-          </a>
           <a href="./index.html#projects" class="resume-download-btn">
-            ← Back to Projects
+            &#8592; Back to Projects
           </a>
         </div>
       </article>

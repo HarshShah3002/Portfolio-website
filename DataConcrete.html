@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Predictive Modeling for Concrete Strength - Project Details</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      article,
-      main {
+      article, main {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -22,12 +27,6 @@
         font-size: 12px;
         color: var(--light-gray);
         margin: 3px 3px 3px 0;
-      }
-
-      .project-tag--accent {
-        border-color: hsla(45, 100%, 59%, 0.35);
-        color: var(--orange-yellow-crayola);
-        background: var(--bg-gradient-yellow-2);
       }
 
       .section-label {
@@ -64,7 +63,31 @@
       .feature-card-body {
         font-size: 13px;
         color: var(--light-gray);
-        line-height: 1.6;
+        line-height: 1.7;
+      }
+
+      .about-text ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+      }
+
+      .about-text li {
+        font-size: 13px;
+        color: var(--light-gray);
+        line-height: 1.7;
+        padding-left: 16px;
+        position: relative;
+      }
+
+      .about-text li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--orange-yellow-crayola);
       }
 
       .back-btn {
@@ -78,19 +101,13 @@
         padding: 6px 14px;
         transition: 0.25s ease;
         margin-bottom: 4px;
+        background: transparent;
       }
 
       .back-btn:hover {
         border-color: var(--orange-yellow-crayola);
-        color: var(--orange-yellow-crayola);
-      }
-
-      .btn-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        justify-content: center;
-        margin-top: 40px;
+        color: var(--white-2);
+        background: hsla(45, 100%, 59%, 0.12);
       }
 
       .project-link-btn {
@@ -100,41 +117,35 @@
         background: var(--orange-yellow-crayola);
         color: var(--smoky-black);
         font-weight: 600;
-        font-size: 14px;
-        border-radius: 10px;
-        padding: 11px 22px;
+        font-size: 13px;
+        border-radius: 8px;
+        padding: 9px 20px;
         transition: 0.25s ease;
+        margin-top: 14px;
       }
 
       .project-link-btn:hover {
         filter: brightness(1.1);
         transform: translateY(-2px);
       }
+
+      .btn-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 40px;
+      }
     </style>
   </head>
-  <body
-    style="
-      background: var(--smoky-black);
-      color: var(--white-2);
-      font-family: 'Poppins', sans-serif;
-    "
-  >
+  <body style="background: var(--smoky-black); color: var(--white-2); font-family: 'Poppins', sans-serif;">
     <main style="max-width: 950px; margin: 60px auto; padding: 30px">
       <article class="content-card">
-        <a href="./index.html#projects" class="back-btn">← Back to Projects</a>
+        <a href="./index.html#projects" class="back-btn">&#8592; Back to Projects</a>
 
-        <figure
-          style="
-            margin: 28px 0 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 32px;
-            flex-wrap: wrap;
-          "
-        >
+        <figure style="margin: 28px 0 4px 0; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap;">
           <img
-            src="./assets/images/project-2.png"
+            src="./assets/images/project-2.svg"
             alt="Concrete Strength Dashboard"
             style="width: 38%; border-radius: 12px; min-width: 200px"
           />
@@ -154,13 +165,21 @@
               <span class="project-tag">OpenRouter API</span>
               <span class="project-tag">ReportLab</span>
             </div>
+            <a
+              href="https://predictive-modeling-concrete-strength.streamlit.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link-btn"
+            >
+              &#x1F4CA; View Live Dashboard
+            </a>
           </div>
         </figure>
 
         <section class="about-text">
 
           <p class="section-label">Overview</p>
-          <p style="color: var(--light-gray); line-height: 1.8; font-size: 14px;">
+          <p style="color: var(--light-gray); line-height: 1.7; font-size: 13px;">
             Built an end-to-end <span class="p-highlight">interactive analytics dashboard</span>
             in Python and Streamlit to analyze and predict concrete compressive strength across
             <span class="p-highlight">1,030 mix design samples</span> spanning 8 material variables.
@@ -275,25 +294,11 @@
         </section>
 
         <div class="btn-row">
-          <a
-            href="https://predictive-modeling-concrete-strength.streamlit.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link-btn"
-          >
-            &#x1F4CA; View Live Dashboard
-          </a>
           <a href="./index.html#projects" class="resume-download-btn">
-            ← Back to Projects
+            &#8592; Back to Projects
           </a>
         </div>
       </article>
     </main>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
   </body>
 </html>

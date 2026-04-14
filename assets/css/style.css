@@ -22,7 +22,8 @@
     hsl(240, 1%, 25%) 3%,
     hsl(0, 0%, 19%) 97%
   );
-  --bg-gradient-jet: linear-gradient(
+  --bg-gradient-jet:
+    linear-gradient(
       to bottom right,
       hsla(240, 1%, 18%, 0.251) 0%,
       hsla(240, 2%, 11%, 0) 100%
@@ -33,7 +34,8 @@
     hsl(45, 100%, 71%) 0%,
     hsla(36, 100%, 69%, 0) 50%
   );
-  --bg-gradient-yellow-2: linear-gradient(
+  --bg-gradient-yellow-2:
+    linear-gradient(
       135deg,
       hsla(45, 100%, 71%, 0.251) 0%,
       hsla(35, 100%, 68%, 0) 59.86%
@@ -928,8 +930,10 @@ main {
 
 .skills-card:hover {
   border-color: var(--orange-yellow-crayola);
-  background: var(--bg-gradient-yellow-2);
-  box-shadow: var(--shadow-2);
+  background: var(--bg-gradient-onyx);
+  box-shadow:
+    0 0 0 1px hsla(45, 100%, 59%, 0.35),
+    var(--shadow-2);
 }
 
 .skills-card-icon {
@@ -1036,19 +1040,29 @@ main {
 
 /* Skill tag pills (used inside modal) */
 .skill-tag {
-  background: var(--bg-gradient-onyx);
+  /* background: var(--bg-gradient-onyx); */
   border: 1px solid var(--jet);
   border-radius: 6px;
   padding: 6px 14px;
   font-size: var(--fs-7);
   font-weight: var(--fw-400);
-  color: var(--light-gray);
+  /* color: var(--light-gray); */
+  background: var(--bg-yellow-2);
+  color: var(--orange-yellow-crayola);
+  border-color: hsla(45, 100%, 59%, 0.35);
 }
 
 .skill-tag--cert {
   border-color: hsla(45, 100%, 59%, 0.35);
   color: var(--orange-yellow-crayola);
-  background: var(--bg-gradient-yellow-2);
+  background: var(--bg-yellow-2);
+}
+
+.skill-tag--cert:hover {
+  border-color: hsla(45, 79%, 62%, 0.495);
+  color: var(--vegas-gold);
+  background: var(--jet);
+  cursor: pointer;
 }
 
 .skills-list {
@@ -2070,7 +2084,8 @@ textarea.form-input::-webkit-resizer {
     border: 5px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+    box-shadow:
+      inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
       inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
   }
 
@@ -2391,7 +2406,9 @@ textarea.form-input::-webkit-resizer {
   );
   background-size: 200% 200%;
   animation: softMoveSidebar 3s linear infinite;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   z-index: -1;

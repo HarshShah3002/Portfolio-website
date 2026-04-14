@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a26"/>
+      <stop offset="100%" stop-color="#12121c"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="hsl(45,100%,59%)" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="hsl(45,100%,59%)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="260" fill="url(#bgGrad2)" rx="12"/>
+
+  <!-- === LEFT: SCATTER PLOT === -->
+  <!-- Panel -->
+  <rect x="12" y="22" width="218" height="200" fill="#18182a" rx="10" stroke="#2a2a3e" stroke-width="1"/>
+  <text x="121" y="38" font-family="Poppins, sans-serif" font-size="8" fill="#7a7a9e" text-anchor="middle">Cement vs Compressive Strength</text>
+
+  <!-- Axes -->
+  <line x1="36" y1="44" x2="36" y2="200" stroke="#2a2a3e" stroke-width="1"/>
+  <line x1="36" y1="200" x2="218" y2="200" stroke="#2a2a3e" stroke-width="1"/>
+
+  <!-- Axis labels -->
+  <text x="127" y="214" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="middle">Cement (kg/m&#179;)</text>
+  <text x="16" y="124" font-family="Poppins, sans-serif" font-size="7" fill="#555570" text-anchor="middle" transform="rotate(-90,16,124)">Strength (MPa)</text>
+
+  <!-- Regression line -->
+  <line x1="44" y1="190" x2="214" y2="52" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Scatter points (random but pattern follows regression) -->
+  <circle cx="52"  cy="178" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="60"  cy="170" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="68"  cy="165" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="72"  cy="172" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="80"  cy="158" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="88"  cy="152" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="95"  cy="158" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="100" cy="140" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="108" cy="132" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="114" cy="145" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="120" cy="126" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="126" cy="120" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="132" cy="128" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="138" cy="112" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="144" cy="106" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="150" cy="115" r="2.5" fill="#4a90d9" opacity="0.7"/>
+  <circle cx="156" cy="98"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="162" cy="90"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="168" cy="100" r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="174" cy="82"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="180" cy="76"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="186" cy="85"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="192" cy="68"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="198" cy="62"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+  <circle cx="205" cy="70"  r="2.5" fill="hsl(45,100%,59%)" opacity="0.85"/>
+
+  <!-- === RIGHT PANEL: GAUGE + FEATURES === -->
+
+  <!-- Gauge card -->
+  <rect x="238" y="22" width="150" height="110" fill="#18182a" rx="10" stroke="#2a2a3e" stroke-width="1"/>
+  <text x="313" y="38" font-family="Poppins, sans-serif" font-size="8" fill="#7a7a9e" text-anchor="middle">Predicted Strength</text>
+
+  <!-- Gauge arc (semicircle background) -->
+  <path d="M 258 110 A 55 55 0 0 1 368 110" fill="none" stroke="#2a2a3e" stroke-width="12" stroke-linecap="round"/>
+  <!-- Gauge arc fill (representing ~75% = PASS) -->
+  <path d="M 258 110 A 55 55 0 0 1 368 110" fill="none" stroke="hsl(45,100%,59%)" stroke-width="12" stroke-linecap="round"
+        stroke-dasharray="148 173" stroke-dashoffset="0" opacity="0.9"/>
+
+  <!-- Gauge needle -->
+  <line x1="313" y1="110" x2="280" y2="70" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="313" cy="110" r="4" fill="#2a2a3e" stroke="hsl(45,100%,59%)" stroke-width="1.5"/>
+
+  <!-- Gauge labels -->
+  <text x="260" y="124" font-family="Poppins, sans-serif" font-size="7" fill="#555570">0</text>
+  <text x="308" y="68" font-family="Poppins, sans-serif" font-size="7" fill="#555570">50</text>
+  <text x="363" y="124" font-family="Poppins, sans-serif" font-size="7" fill="#555570">80+</text>
+  <text x="313" y="103" font-family="Poppins, sans-serif" font-size="13" fill="hsl(45,100%,59%)" text-anchor="middle" font-weight="700">38.4</text>
+  <text x="313" y="114" font-family="Poppins, sans-serif" font-size="7" fill="#8888aa" text-anchor="middle">MPa  &#x2713; PASS</text>
+
+  <!-- Feature importance card -->
+  <rect x="238" y="140" width="150" height="82" fill="#18182a" rx="10" stroke="#2a2a3e" stroke-width="1"/>
+  <text x="313" y="155" font-family="Poppins, sans-serif" font-size="8" fill="#7a7a9e" text-anchor="middle">Feature Importance</text>
+
+  <!-- Feature bars -->
+  <text x="244" y="169" font-family="Poppins, sans-serif" font-size="7" fill="#ccccdd">Cement</text>
+  <rect x="244" y="172" width="110" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="172" width="100" height="5" fill="hsl(45,100%,59%)" rx="2"/>
+
+  <text x="244" y="184" font-family="Poppins, sans-serif" font-size="7" fill="#ccccdd">Age</text>
+  <rect x="244" y="187" width="110" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="187" width="78" height="5" fill="hsl(45,100%,59%)" rx="2" opacity="0.8"/>
+
+  <text x="244" y="199" font-family="Poppins, sans-serif" font-size="7" fill="#ccccdd">Water</text>
+  <rect x="244" y="202" width="110" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="202" width="56" height="5" fill="#e05252" rx="2" opacity="0.7"/>
+
+  <text x="244" y="214" font-family="Poppins, sans-serif" font-size="7" fill="#ccccdd">Superplasticizer</text>
+  <rect x="244" y="217" width="110" height="5" fill="#2a2a3e" rx="2"/>
+  <rect x="244" y="217" width="34" height="5" fill="hsl(45,100%,59%)" rx="2" opacity="0.5"/>
+
+  <!-- Model badge -->
+  <rect x="238" y="228" width="74" height="16" fill="#1e1e2e" rx="5" stroke="#2a2a3e" stroke-width="0.8"/>
+  <text x="275" y="239" font-family="Poppins, sans-serif" font-size="7" fill="hsl(45,100%,59%)" text-anchor="middle">RidgeCV (CV=5)</text>
+  <rect x="316" y="228" width="72" height="16" fill="#1e1e2e" rx="5" stroke="#2a2a3e" stroke-width="0.8"/>
+  <text x="352" y="239" font-family="Poppins, sans-serif" font-size="7" fill="#4ade80" text-anchor="middle">1,030 samples</text>
+
+  <!-- Title bar -->
+  <rect x="0" y="232" width="226" height="28" fill="#12121c" rx="0"/>
+  <rect x="0" y="244" width="226" height="16" fill="#12121c" rx="12"/>
+  <rect x="0" y="232" width="226" height="12" fill="#12121c"/>
+  <text x="14" y="244" font-family="Poppins, sans-serif" font-size="9.5" fill="hsl(45,100%,59%)" font-weight="700">CONCRETE STRENGTH ML</text>
+  <text x="14" y="255" font-family="Poppins, sans-serif" font-size="7" fill="#555570">Ridge · Decision Tree · GenAI · Streamlit</text>
+</svg>
