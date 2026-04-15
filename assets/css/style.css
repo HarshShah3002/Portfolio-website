@@ -491,9 +491,12 @@ main {
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-list {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -2550,5 +2553,158 @@ textarea.form-input::-webkit-resizer {
       rgba(255, 213, 44, 0.7),
       rgba(255, 213, 44, 0.3)
     ) !important;
+  }
+}
+
+/* ==============================================
+   THEME TOGGLE BUTTON
+   ============================================== */
+
+.theme-toggle {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--jet);
+  background: var(--eerie-black-1);
+  color: var(--orange-yellow-crayola);
+  font-size: 17px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  margin-right: 12px;
+  margin-left: 6px;
+}
+
+.theme-toggle:hover {
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: 0 0 0 2px hsla(45, 100%, 59%, 0.2);
+}
+
+/* Dark mode: show sun icon (click → go light) */
+html:not([data-theme="light"]) .theme-icon-moon { display: none; }
+/* Light mode: show moon icon (click → go dark) */
+html[data-theme="light"] .theme-icon-sun { display: none; }
+
+/* ==============================================
+   LIGHT MODE — Apple Notes Aesthetic
+   ============================================== */
+
+html[data-theme="light"] {
+  /* Gradient overrides */
+  --bg-gradient-onyx: linear-gradient(to bottom right, #EDE8DF 3%, #E4DDD3 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right, rgba(237,232,223,0.4) 0%, rgba(228,221,211,0) 100%), #EDE8DF;
+  --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(38, 90%, 72%) 0%, hsla(36, 90%, 70%, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(38, 90%, 60%, 0.18) 0%, hsla(35, 90%, 55%, 0) 59.86%), #F0EBE2;
+  --border-gradient-onyx: linear-gradient(to bottom right, #C5C0B6 0%, rgba(197,192,182,0) 50%);
+  --text-gradient-yellow: linear-gradient(to right, hsl(38, 90%, 38%), hsl(38, 90%, 38%));
+
+  /* Solid color overrides */
+  --jet: #CEC8BE;
+  --onyx: #EDE8DF;
+  --eerie-black-1: #F0EBE2;
+  --eerie-black-2: #FEFCF9;
+  --smoky-black: #FAF7F2;
+  --white-1: #1C1C1E;
+  --white-2: #1C1C1E;
+  --orange-yellow-crayola: hsl(38, 90%, 38%);
+  --vegas-gold: hsl(38, 90%, 38%);
+  --light-gray: #3A3530;
+  --light-gray-70: rgba(58, 53, 48, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 40%);
+
+  /* Shadow overrides — light, warm */
+  --shadow-1: -4px 8px 24px rgba(0, 0, 0, 0.07);
+  --shadow-2: 0 16px 30px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 16px 40px rgba(0, 0, 0, 0.06);
+  --shadow-4: 0 25px 50px rgba(0, 0, 0, 0.05);
+  --shadow-5: 0 24px 80px rgba(0, 0, 0, 0.07);
+}
+
+/* Hardcoded background overrides for light mode */
+
+html[data-theme="light"] body {
+  background: #FAF7F2;
+}
+
+html[data-theme="light"] .navbar {
+  background: rgba(250, 247, 242, 0.9);
+  border-color: #CEC8BE;
+}
+
+/* Sidebar has a hardcoded rgba background */
+html[data-theme="light"] .sidebar {
+  background: #FEFCF9;
+}
+
+/* Sidebar animated border — warm amber on light bg */
+html[data-theme="light"] .sidebar::before {
+  background: linear-gradient(
+    135deg,
+    transparent,
+    rgba(180, 140, 40, 0.45),
+    transparent
+  );
+}
+
+
+/* Service items have a hardcoded #1c1c1c background */
+html[data-theme="light"] .service-item {
+  background: #FEFCF9;
+  border-color: rgba(160, 130, 50, 0.35);
+}
+
+/* Icon box glow — softer on light */
+html[data-theme="light"] .icon-box ion-icon {
+  color: hsl(38, 90%, 38%);
+}
+
+html[data-theme="light"] .icon-box ion-icon:hover {
+  filter: drop-shadow(0 0 5px hsla(38, 90%, 38%, 0.5));
+}
+
+/* Bullet marker color */
+html[data-theme="light"] .about-text li::marker {
+  color: hsl(38, 90%, 38%) !important;
+}
+
+/* Resume download button — hardcoded yellow */
+html[data-theme="light"] .resume-download-btn {
+  color: hsl(38, 90%, 38%);
+  border-color: hsl(38, 90%, 38%);
+}
+
+html[data-theme="light"] .resume-download-btn:hover {
+  background: hsl(38, 90%, 38%);
+  color: #FAF7F2;
+  border-color: hsl(38, 90%, 38%);
+}
+
+/* Skills modal overlay — hardcoded dark overlay */
+html[data-theme="light"] .skills-modal-overlay {
+  background: rgba(90, 82, 72, 0.45);
+}
+
+html[data-theme="light"] .skills-modal {
+  background: #FEFCF9;
+  border-color: #CEC8BE;
+}
+
+/* Project image hover overlay — lighten */
+html[data-theme="light"] .project-item > a:hover .project-img::before {
+  background: hsla(0, 0%, 0%, 0.25);
+}
+
+/* Theme toggle hover in light mode */
+html[data-theme="light"] .theme-toggle:hover {
+  box-shadow: 0 0 0 2px hsla(38, 90%, 38%, 0.2);
+}
+
+/* Mobile sidebar border in light mode */
+@media (max-width: 480px) {
+  html[data-theme="light"] .sidebar {
+    border-color: rgba(180, 140, 40, 0.45) !important;
   }
 }

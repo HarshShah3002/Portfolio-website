@@ -19,6 +19,12 @@
     - custom css link
   -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script>
+      // Apply theme before first paint to prevent flash
+      if (localStorage.getItem("portfolio-theme") === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    </script>
 
     <!--
     - google font link
@@ -177,6 +183,11 @@ College Station, Texas, USA
               <button class="navbar-link" data-nav-link>Contact</button>
             </li>
           </ul>
+
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+            <ion-icon name="sunny-outline" class="theme-icon-sun"></ion-icon>
+            <ion-icon name="moon-outline" class="theme-icon-moon"></ion-icon>
+          </button>
         </nav>
 
         <!--

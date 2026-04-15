@@ -1,5 +1,26 @@
 "use strict";
 
+// theme toggle
+(function () {
+  const html = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+
+  // apply saved preference before paint
+  if (localStorage.getItem("portfolio-theme") === "light") {
+    html.setAttribute("data-theme", "light");
+  }
+
+  toggle.addEventListener("click", function () {
+    if (html.getAttribute("data-theme") === "light") {
+      html.removeAttribute("data-theme");
+      localStorage.setItem("portfolio-theme", "dark");
+    } else {
+      html.setAttribute("data-theme", "light");
+      localStorage.setItem("portfolio-theme", "light");
+    }
+  });
+}());
+
 // element toggle function
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
