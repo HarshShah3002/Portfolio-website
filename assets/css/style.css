@@ -1266,7 +1266,7 @@ main {
 }
 
 .project-title {
-  color: hsl(45, 100%, 63%);
+  color: var(--orange-yellow-crayola);
   font-size: var(--fs-5);
   font-weight: var(--fw-400);
   text-transform: capitalize;
