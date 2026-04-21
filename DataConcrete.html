@@ -56,6 +56,13 @@
         border: 1px solid var(--jet);
         border-radius: 12px;
         padding: 16px;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--orange-yellow-crayola);
+        box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.15);
       }
 
       .feature-card-title {
