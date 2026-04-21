@@ -20,10 +20,15 @@
   -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script>
-      // Apply theme before first paint to prevent flash
-      if (localStorage.getItem("portfolio-theme") === "light") {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
+      // Apply theme before first paint — stored pref wins, else follow system
+      (function () {
+        var stored = localStorage.getItem("portfolio-theme");
+        if (stored === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
+        } else if (!stored && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
     </script>
 
     <!--
@@ -38,6 +43,26 @@
   </head>
 
   <body>
+
+    <!-- ==================== INTRO OVERLAY ==================== -->
+    <div id="intro-overlay">
+      <canvas id="intro-canvas"></canvas>
+      <div class="intro-corner intro-corner--tl"></div>
+      <div class="intro-corner intro-corner--tr"></div>
+      <div class="intro-corner intro-corner--bl"></div>
+      <div class="intro-corner intro-corner--br"></div>
+      <div class="intro-scan-line"></div>
+      <div class="intro-content">
+        <h1 class="intro-name" id="intro-name">Harsh Tarang Shah</h1>
+        <div class="intro-divider"></div>
+        <p class="intro-tagline">Engineering Management &nbsp;·&nbsp; Data Analytics &nbsp;·&nbsp; Business Analytics</p>
+        <div class="intro-cta">
+          <span class="intro-cta-dot"></span>
+          <span>Click anywhere to enter</span>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== END INTRO OVERLAY ==================== -->
     <!--
     - #MAIN
   -->
@@ -883,6 +908,9 @@ College Station, Texas, USA
 
       // scroll to top so user sees the section
       window.scrollTo(0, 0);
+
+      // Remove the hash from the URL so a reload doesn't re-trigger this
+      history.replaceState(null, "", window.location.pathname);
     }
   });
 </script>

@@ -6,9 +6,14 @@
     <title>Predictive Modeling for Concrete Strength - Project Details</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <script>
-      if (localStorage.getItem("portfolio-theme") === "light") {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
+      (function () {
+        var stored = localStorage.getItem("portfolio-theme");
+        if (stored === "light") {
+          document.documentElement.setAttribute("data-theme", "light");
+        } else if (!stored && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -313,5 +318,26 @@
         </div>
       </article>
     </main>
+
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">&#8679;</button>
+
+    <script>
+      (function () {
+        var btn = document.getElementById("scroll-top-btn");
+        window.addEventListener("scroll", function () {
+          btn.classList.toggle("visible", window.scrollY > 200);
+        }, { passive: true });
+        btn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }());
+
+      // Tell index.html to skip the intro animation on back-navigation
+      document.querySelectorAll('a[href*="index.html"]').forEach(function (a) {
+        a.addEventListener("click", function () {
+          sessionStorage.setItem("skip-intro", "1");
+        });
+      });
+    </script>
   </body>
 </html>
