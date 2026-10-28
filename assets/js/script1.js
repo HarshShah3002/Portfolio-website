@@ -135,7 +135,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
     },
     tools: {
       title: "Tools & Platforms",
-      tags: ["Tableau", "Power BI", "Streamlit", "Git", "Jira", "Jupyter Notebook", "Google Analytics", "AWS", "MySQL", "Google Colab", "Notion", "Slack"],
+      tags: ["Tableau", "Power BI", "Streamlit", "Git", "Jira", "Jupyter Notebook", "Google Analytics", "AWS", "Amazon Redshift", "Apache Airflow", "dbt", "MySQL", "Google Colab", "Notion", "Slack"],
       cert: false
     },
     certifications: {

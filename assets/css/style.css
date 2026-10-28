@@ -2040,6 +2040,11 @@ textarea.form-input::-webkit-resizer {
     gap: 20px 25px;
   }
 
+  /* odd card out spans the full row */
+  .service-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
   /* testimonials */
 
   .testimonials-item {

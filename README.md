@@ -4,7 +4,7 @@ Personal portfolio website built with HTML, CSS, and JavaScript. Hosted on Verce
 
 ## About
 
-This is my personal portfolio showcasing my projects, experience, and skills across data science, machine learning, and product management.
+This is my personal portfolio showcasing my projects, experience, and skills across data analytics, data engineering, machine learning, and business analytics.
 
 ## Projects
 
@@ -19,6 +19,6 @@ HTML · CSS · JavaScript · Python · Streamlit · MySQL · Scikit-learn · Med
 
 ## Contact
 
-- Email: harshtarangshah@gmail.com
+- Email: harshtshah30@gmail.com
 - LinkedIn: [linkedin.com/in/harsh-shah-3002](https://www.linkedin.com/in/harsh-shah-3002)
 - GitHub: [github.com/HarshShah3002](https://github.com/HarshShah3002)
