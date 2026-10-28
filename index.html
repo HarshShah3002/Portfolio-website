@@ -612,34 +612,95 @@ College Station, Texas, USA
 
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Business Analyst Intern - Staytuned LLP</h4>
-      <span class="p-highlight">January 2024 - May 2024</span>
+      <span>Ahmedabad, India | January 2024 to May 2024</span>
 
-      <p class="timeline-text">
-        • Engineered an intelligent issue-management system using the GitHub API to auto-categorize 180+ monthly issues by priority and bug type via keyword analysis, cutting mean-time-to-resolution for P0/P1 issues from 48 to 29 hours (40% reduction).<br><br>
-        • Drove data-informed roadmap decisions by mining repository metrics (PR cycle time, sprint velocity) in Python and SQL, building a Power BI dashboard tracking 8 KPIs that surfaced 3 bottlenecks and lifted sprint completion by 26%.<br><br>
-        • Led a cross-functional team of 6 to automate development workflows using JavaScript and GitHub Actions, creating PRDs and deploying automation for issue triage and PR labeling, reducing manual steps from 10 to 2 and saving 15+ developer hours weekly.
-      </p>
+      <p class="timeline-text timeline-overview">Staytuned is a startup where the engineering team was making roadmap and prioritization decisions mostly on gut feel, with little visibility into where work was getting stuck. I came in on the analytics and process side to give the team data to decide with, and to automate the repetitive work slowing them down.</p>
+
+      <ul class="timeline-stack" aria-label="Tech stack">
+        <li class="skill-tag">Python</li>
+        <li class="skill-tag">SQL</li>
+        <li class="skill-tag">GitHub API</li>
+        <li class="skill-tag">GitHub Actions</li>
+        <li class="skill-tag">JavaScript</li>
+        <li class="skill-tag">Power BI</li>
+      </ul>
+
+      <details class="timeline-details">
+        <summary>
+          <span class="timeline-details-label">Highlights</span>
+          <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+        </summary>
+
+        <ul class="timeline-text timeline-highlights">
+          <li><strong>Intelligent issue management system:</strong> Built a system on the GitHub API that automatically categorized 180+ incoming issues a month by priority and bug type using keyword analysis on the issue text. Triage had been manual and slow; afterward, mean time to resolution for critical P0/P1 issues dropped from 48 hours to 29, a 40% reduction.</li>
+          <li><strong>Surfacing hidden bottlenecks:</strong> Mined repository metrics like PR cycle time and sprint velocity in Python and SQL, then built a Power BI dashboard tracking 8 KPIs. It surfaced 3 bottlenecks in the development workflow that no one had visibility into before, and acting on them lifted sprint completion by 26%.</li>
+          <li><strong>Leading workflow automation:</strong> Led a cross-functional team of 6 to automate development workflows with JavaScript and GitHub Actions. I wrote the PRDs, scoped the work with stakeholders, and shipped automation for issue triage and PR labeling, cutting manual steps from 10 to 2 and saving 15+ developer hours every week.</li>
+        </ul>
+
+        <p class="timeline-takeaway"><strong>Key takeaway:</strong> Turning messy operational data into a small set of clear metrics is what gets a team to actually change how it works.</p>
+      </details>
     </li>
 
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Data Engineer Intern - Wealthstreet Financial Services</h4>
-      <span>January 2023 - January 2024</span>
+      <span>Ahmedabad, India | January 2023 to January 2024</span>
 
-      <p class="timeline-text">
-        • Automated ingestion of daily NSE/BSE market data feeds into an Amazon S3 data lake using AWS Glue and Kinesis Firehose, orchestrated via Apache Airflow, cutting report turnaround by 35% and eliminating 90% of manual data-entry errors.<br><br>
-        • Built dbt transformation models on Amazon Redshift converting 2M+ client trading records across equities, F&amp;O, and mutual funds into analytics-ready tables, powering an RFM segmentation model that flagged 4 high-value cohorts for the RM team.<br><br>
-        • Created a dashboard on Redshift data tracking AUM and brokerage revenue across 12K+ accounts, saving 8+ hours weekly.
-      </p>
+      <p class="timeline-text timeline-overview">Wealthstreet is a stock broking and mutual fund firm. When I joined, daily market data and client trading records were being pulled together largely by hand, which made reports slow and error prone. I owned the build of an automated pipeline that took data from raw feeds all the way to dashboards the relationship management team used every day.</p>
+
+      <ul class="timeline-stack" aria-label="Tech stack">
+        <li class="skill-tag">Python</li>
+        <li class="skill-tag">SQL</li>
+        <li class="skill-tag">Amazon S3</li>
+        <li class="skill-tag">AWS Glue</li>
+        <li class="skill-tag">Kinesis Firehose</li>
+        <li class="skill-tag">Apache Airflow</li>
+        <li class="skill-tag">dbt</li>
+        <li class="skill-tag">Amazon Redshift</li>
+      </ul>
+
+      <details class="timeline-details">
+        <summary>
+          <span class="timeline-details-label">Highlights</span>
+          <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+        </summary>
+
+        <ul class="timeline-text timeline-highlights">
+          <li><strong>Automated market data ingestion:</strong> Built a pipeline that pulled daily NSE/BSE market data feeds into an Amazon S3 data lake using AWS Glue and Kinesis Firehose, with Apache Airflow orchestrating each step. This cut report turnaround by 35%.</li>
+          <li><strong>Built trust in the data, not just the pipeline:</strong> Early on, a daily total didn’t tie out, and I traced it to the source feed arriving incomplete on a couple of days while the pipeline processed it as if it were whole. I added reconciliation checks that compared row counts and totals against what the source reported sending, and flagged mismatches instead of loading them silently. Together with the automation, this eliminated about 90% of manual data entry errors.</li>
+          <li><strong>Modeled 2M+ trading records in dbt:</strong> Equities, F&amp;O, and mutual fund records all arrived in different structures. I wrote dbt models on Amazon Redshift to normalize them into consistent, analytics-ready tables.</li>
+          <li><strong>Client segmentation for the RM team:</strong> Using those tables, I built an RFM segmentation model, scoring clients on recency, frequency, and monetary value, which flagged 4 high-value cohorts the relationship managers could prioritize for outreach.</li>
+          <li><strong>Revenue and AUM dashboard:</strong> Created a dashboard on the Redshift data tracking AUM and brokerage revenue across 12K+ client accounts, saving the team 8+ hours of manual reporting every week.</li>
+        </ul>
+
+        <p class="timeline-takeaway"><strong>Key takeaway:</strong> A pipeline that runs is not the same as one you can trust. I now build validation in from the start.</p>
+      </details>
     </li>
 
     <li class="timeline-item">
       <h4 class="h4 timeline-item-title">Data Analyst Intern - Innodel Technologies Pvt. Ltd.</h4>
-      <span>May 2022 - July 2022</span>
+      <span>Ahmedabad, India | May 2022 to July 2022</span>
 
-      <p class="timeline-text">
-        • Designed a Tableau dashboard visualizing cardiovascular illness trends across key metrics (prevalence rate, age distribution, regional spread), enabling healthcare providers to identify high-risk patient segments and inform treatment strategies.<br><br>
-        • Trained a collaborative filtering model on a 500K+ row Netflix dataset to surface genre affinity patterns, isolating a high-retention docuseries and international-content cohort that shaped 4 personalization recommendations for retention strategy.
-      </p>
+      <p class="timeline-text timeline-overview">My first data role. Over two months I worked on two very different problems, one in healthcare and one in content personalization, which showed me early how the same analytical toolkit carries across domains. It’s where I got hooked on this kind of work.</p>
+
+      <ul class="timeline-stack" aria-label="Tech stack">
+        <li class="skill-tag">Python</li>
+        <li class="skill-tag">Tableau</li>
+        <li class="skill-tag">Collaborative Filtering</li>
+      </ul>
+
+      <details class="timeline-details">
+        <summary>
+          <span class="timeline-details-label">Highlights</span>
+          <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+        </summary>
+
+        <ul class="timeline-text timeline-highlights">
+          <li><strong>Cardiovascular illness dashboard:</strong> Designed a Tableau dashboard visualizing heart illness trends across prevalence rate, age distribution, and regional spread. Viewing these together made high-risk intersections easy to spot, such as older patients in specific regions, so healthcare providers could focus treatment strategies where risk was concentrated.</li>
+          <li><strong>Content personalization model:</strong> Trained a collaborative filtering model on a 500K+ row public Netflix dataset to find genre affinity patterns. It isolated a high-retention cohort drawn to docuseries and international content, which shaped 4 personalization recommendations for retention strategy.</li>
+        </ul>
+
+        <p class="timeline-takeaway"><strong>Key takeaway:</strong> The goal of analysis is making the insight obvious to the person who has to act on it.</p>
+      </details>
     </li>
 
   </ol>
