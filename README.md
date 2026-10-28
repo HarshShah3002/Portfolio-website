@@ -15,7 +15,7 @@ This is my personal portfolio showcasing my projects, experience, and skills acr
 
 ## Tech Stack
 
-HTML · CSS · JavaScript · Python · Streamlit · MySQL · Scikit-learn · MediaPipe · Plotly
+HTML · CSS · JavaScript · Python · Streamlit · MySQL · Scikit-learn · MediaPipe · Plotly · AWS · Apache Airflow · dbt · Amazon Redshift
 
 ## Contact
 

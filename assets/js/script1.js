@@ -130,7 +130,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
   const skillsData = {
     technical: {
       title: "Technical Skills",
-      tags: ["Python", "SQL", "JavaScript", "Java", "HTML / CSS", "Machine Learning", "A/B Testing", "Data Analysis & Visualization"],
+      tags: ["Python", "SQL", "JavaScript", "ETL Pipelines", "RFM", "Market Basket Analysis", "EDA", "Machine Learning", "A/B Testing", "Data Analysis & Visualization"],
       cert: false
     },
     tools: {
